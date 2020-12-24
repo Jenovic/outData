@@ -31,7 +31,6 @@ ul {
 }
 
 p {
-
   &.large,
   .large & {
   }
@@ -41,14 +40,12 @@ p {
   }
 
   a {
-
     &:hover {
     }
   }
 }
 
 blockquote {
-
   .source {
   }
 }
