@@ -21,7 +21,7 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "wpackagist-plugin/wordpress-seo": "11.*",
+    "wpackagist-plugin/wordpress-seo": "14.*",
     "wpackagist-plugin/gdpr-cookie-compliance": "2.*",
     "wpackagist-plugin/resmushit-image-optimizer": "0.1.22",
     "wpackagist-plugin/rocket-lazy-load": "2.*",

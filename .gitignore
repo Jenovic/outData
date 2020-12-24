@@ -17,6 +17,7 @@ Thumbs.db
 
 # wordpress specific
 wp-config.php
+composer.lock
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/*
