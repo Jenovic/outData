@@ -1,0 +1,97 @@
+%button {
+  background-color: $black;
+  border: 0;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 1em 0.5em 0 0;
+  padding: 16px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 0.25s;
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: $black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%button-blue {
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+}
+
+// %button-orange {
+//   background-color: $sunrise;
+
+//   &:hover {
+//     background-color: $sunset;
+//   }
+// }
+
+// scss-lint:disable QualifyingElement
+.button,
+button,
+input[type='button'] {
+  @extend %button;
+
+  @include bp(IE11) {
+    &.button--blue {
+      background-color: $blue;
+
+      &:hover {
+        background-color: $blue-hover;
+      }
+    }
+
+    // &.button--orange {
+    //   background-color: $sunrise;
+
+    //   &:hover {
+    //     background-color: $sunset;
+    //   }
+    // }
+  }
+}
+
+.button {
+  &--blue,
+  &.blue {
+    @extend %button-blue;
+  }
+
+  // &--orange,
+  // &.orange {
+  //   @extend %button-orange;
+  // }
+}
+
+button,
+input[type='button'] {
+  &[class*='--blue'],
+  &.button--blue,
+  &.blue {
+    @extend %button-blue;
+  }
+
+  // &[class*='--orange'],
+  // &.button--orange,
+  // &.orange {
+  //   @extend %button-orange;
+  // }
+}

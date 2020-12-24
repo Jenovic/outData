@@ -13,9 +13,26 @@ $brown: rgba(139, 87, 42, 1);
 $purple: rgba(144, 19, 254, 1);
 $blue: rgba(74, 144, 226, 1);
 $grey: rgba(155, 155, 155, 1);
-
-
-
+$off-white: rgb(245, 245, 245);
+$dark: rgb(10, 10, 10);
+$blue: #005c97;
+$blue-hover: #005c97;
+$dark-blue: #031b4e;
+$hero-gradient: linear-gradient(
+  to bottom,
+  #004967,
+  #00537f,
+  #005c97,
+  #0064b0,
+  #006bc7,
+  #0174d3,
+  #017ce0,
+  #0085ec,
+  #0091ef,
+  #009df0,
+  #00a8f0,
+  #04b2ef
+);
 
 //  ==========================
 //
@@ -38,10 +55,7 @@ $desktop-gutter-width: $tablet-gutter-width;
 
 // Total width
 $total-width: 1140px;
-
-
-
-
+$header-width: 1400px;
 
 //  ==========================
 //
@@ -54,14 +68,11 @@ $bp-md: 768px;
 $bp-lg: 1025px;
 $bp-xl: 1140px;
 
-
-
-
 //  ==========================
 //
 //  FONTS
 //
 //  ==========================
 
-$font-primary: sans-serif;
-$font-secondary: sans-serif;
+$font-primary: 'Dosis', sans-serif;
+$font-secondary: 'Dosis', sans-serif;

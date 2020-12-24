@@ -16,7 +16,7 @@ class theme
 
 		// Register Menus
 		register_nav_menus( array(
-			'primary' => 'Header Navigation',
+			'main_menu' => 'Main Navigation',
 		) );
 
 		// Enqueue JS and CSS
@@ -43,12 +43,13 @@ class theme
 	 */
 	public static function enqueue_scripts()
 	{
-		$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . 'path-to-js' ) );
-		$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . 'path-to-stylesheet' ) );
+		$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/dist/scripts/scripts.js' ) );
+		$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/dist/styles/style.css' ) );
 
-		wp_enqueue_script('themejs', get_template_directory_uri() . 'path-to-js', array('jquery'), $js_cache_buster, true );
+		wp_enqueue_script('themejs', get_template_directory_uri() . '/dist/scripts/scripts.js', array('jquery'), $js_cache_buster, true );
 
-		wp_enqueue_style('themecss', get_template_directory_uri() . 'path-to-css', array(), $css_cache_buster);
+		wp_enqueue_style('themecss', get_template_directory_uri() . '/dist/styles/style.css', array(), $css_cache_buster);
+		wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800', array(), $css_cache_buster);
 	}
 }
 new theme();
