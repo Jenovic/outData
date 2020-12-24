@@ -12,6 +12,40 @@ $img = get_field('hero_image');
 			<div class="col is-12 is-6-md load-hidden">
 				<div class="hero-home__content">
 					<h1 class="ctrl-white"><?php the_field('hero_title'); ?></h1>
+					<div class="animated-icons">
+						<a href="" class="">
+							<div>
+								<span></span><span></span><span></span><span></span>
+								<span class="icon is-large fas fa-3x">
+									<i class="fab fa-linkedin-in"></i>
+								</span>
+							</div>
+						</a>
+						<a href="" class="orange-shadow">
+							<div>
+								<span></span><span></span><span></span><span></span>
+								<span class="icon is-large fas fa-3x">
+									<i class="fab fa-github"></i>
+								</span>
+							</div>
+						</a>
+						<a href="" class="orange-border">
+							<div>
+								<span></span><span></span><span></span><span></span>
+								<span class="icon is-large fas fa-3x">
+									<i class="fab fa-twitter"></i>
+								</span>
+							</div>
+						</a>
+						<a href="" class="orange-background">
+							<div>
+								<span></span><span></span><span></span><span></span>
+								<span class="icon is-large fas fa-3x">
+									<i class="fab fa-kaggle"></i>
+								</span>
+							</div>
+						</a>
+					</div>
 					<p class="ctrl-white"><?php the_field('hero_description'); ?></p>
 				</div>
 			</div>
