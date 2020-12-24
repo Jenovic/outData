@@ -646,7 +646,6 @@
     input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
       background-color: $off-white;
       border: 1px solid $white;
-      // border-radius: 21px;
       color: $dark-blue;
       height: 45px;
       margin-right: 10px;
