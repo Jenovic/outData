@@ -1,0 +1,34 @@
+@import 'variables';
+@import 'mixins';
+@import 'grid';
+@import 'typography';
+@import 'modifiers';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  &.mobile-menu-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  background: $cloud;
+  color: $light-ocean;
+  font-family: $font-primary;
+  font-size: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5em;
+  margin: 0;
+  max-width: 100%;
+  min-height: 100%;
+
+  @include bp(lg) {
+    font-size: 17px;
+  }
+}

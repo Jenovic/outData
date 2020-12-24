@@ -1,0 +1,31 @@
+{
+  "name": "repos/your-repo-name",
+  "authors": [
+    {
+      "name": "Jenovic Lumu",
+      "email": "lumujenovic@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "wpackagist-plugin/wordpress-seo": "11.*",
+    "wpackagist-plugin/gdpr-cookie-compliance": "2.*",
+    "wpackagist-plugin/resmushit-image-optimizer": "0.1.22",
+    "wpackagist-plugin/rocket-lazy-load": "2.*",
+    "wpackagist-plugin/classic-editor": "1.*",
+    "wpackagist-plugin/regenerate-thumbnails": "3.1.*"
+  }
+}

@@ -1,0 +1,67 @@
+//  ==========================
+//
+//  COLOURS
+//
+//  ==========================
+
+$black: rgba(0, 0, 0, 0);
+$white: rgba(255, 255, 255, 1);
+$red: rgba(208, 2, 27, 1);
+$yellow: rgba(245, 166, 35, 1);
+$green: rgba(126, 211, 33, 1);
+$brown: rgba(139, 87, 42, 1);
+$purple: rgba(144, 19, 254, 1);
+$blue: rgba(74, 144, 226, 1);
+$grey: rgba(155, 155, 155, 1);
+
+
+
+
+//  ==========================
+//
+//  GRID SETTINGS
+//
+//  - Open Sketch, locate 'View' in the top right, click 'Layout Settings...'
+//  - Update $mobile-gutter-width below to the 'Gutter Width' value in Sketch
+//  - Update $total-width below to 'Total Width' value in Sketch
+//
+//  ==========================
+
+// Gutter width [Mobile]
+$mobile-gutter-width: 40px;
+
+// Gutter width [Tablet]
+$tablet-gutter-width: $mobile-gutter-width;
+
+// Gutter width [Desktop]
+$desktop-gutter-width: $tablet-gutter-width;
+
+// Total width
+$total-width: 1140px;
+
+
+
+
+
+//  ==========================
+//
+//  BREAKPOINTS
+//
+//  ==========================
+
+$bp-sm: 520px;
+$bp-md: 768px;
+$bp-lg: 1025px;
+$bp-xl: 1140px;
+
+
+
+
+//  ==========================
+//
+//  FONTS
+//
+//  ==========================
+
+$font-primary: sans-serif;
+$font-secondary: sans-serif;
