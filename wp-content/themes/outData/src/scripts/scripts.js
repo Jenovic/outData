@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.hamburger').classList.toggle('is-active');
     document.querySelector('.header__toggle').classList.toggle('is-active');
     document.querySelector('.header').classList.toggle('is-active');
+    document.querySelector('.js-search').classList.toggle('open');
     document.querySelector('nav').classList.toggle('is-active');
   }
 
@@ -74,6 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       document.querySelector('#js-header').classList.remove('scrolled');
     }
+  }
+
+  /**
+   * toggleSearchState()
+   *
+   * Toggle .open class on search element
+   */
+  function toggleSearchState() {
+    let search = document.querySelector('.js-search');
+
+    if (search.classList.contains('open')) {
+      search.classList.remove('open');
+    } else {
+      search.classList.add('open');
+    }
+  }
+
+  /**
+   * if .mobile-toggle exists, link toggleMobileMenu function to click event
+   */
+  if (document.querySelector('.js-search')) {
+    document
+      .querySelector('.js-search-toggle')
+      .addEventListener('click', toggleSearchState, false);
   }
 
   /**

@@ -40,6 +40,15 @@
 			<div class="header__actions">
 				<a class="button button--blue" href="/contact-us">Contact us</a>
 			</div>
+
+			<div class="header__search js-search">
+				<form action="/" method="get" id="search" class="search" autocomplete="off">
+					<input name="s" placeholder="Search..." autocomplete="off">
+					<button type="submit"><span class="icon-search"></span></button>
+				</form>
+				<div class="header__search__toggle js-search-toggle">&nbsp;</div>
+			</div>
+
 			<div class="header__toggle">
 				<button id="mobile-toggle" role="button" aria-label="Toggle Navigation" class="hamburger hamburger--collapse js-hamburger">
 					<span class="hamburger-box">

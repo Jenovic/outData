@@ -585,6 +585,129 @@
   &--blue {
     background-color: $blue;
   }
+
+  &__search {
+    background-color: $white;
+    bottom: -200px;
+    box-sizing: border-box;
+    display: flex;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
+    width: 100%;
+
+    @include bp(lg) {
+      background-color: transparent;
+      bottom: auto;
+      opacity: 1;
+      padding: 0 0 0 15px;
+      position: relative;
+      pointer-events: all;
+      width: auto;
+    }
+
+    &.open {
+      bottom: 0;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    form {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @include bp(lg) {
+        width: auto;
+      }
+    }
+
+    button,
+    &__toggle {
+      background-image: url('../assets/icon-search.svg');
+      background-repeat: no-repeat;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+    }
+
+    button {
+      margin: 12px -20px 0 1px;
+      border-radius: 0;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
+      background-color: $off-white;
+      border: 1px solid $white;
+      // border-radius: 21px;
+      color: $dark-blue;
+      height: 45px;
+      margin-right: 10px;
+      padding: 0 10px;
+      transition-duration: 0.25s;
+      transition-property: border-color, width, padding;
+      transition-timing-function: ease-in-out;
+
+      @include bp(lg) {
+        padding: 0;
+        width: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 0;
+
+      @include bp(lg) {
+        pointer-events: none;
+      }
+    }
+
+    &__toggle {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include bp(lg) {
+        display: block;
+      }
+    }
+
+    &.open {
+      [class*='__toggle'] {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      button {
+        cursor: pointer;
+        pointer-events: all;
+      }
+
+      input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
+        flex-grow: 2;
+        padding: 0 10px;
+
+        @include bp(lg) {
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 
 .oldschool {
