@@ -17,6 +17,8 @@ class theme
 		// Register Menus
 		register_nav_menus( array(
 			'main_menu' => 'Main Navigation',
+			'footer_a' => 'Footer menu (A)',
+			'footer_legal' => 'Footer Legal Navigation',
 		) );
 
 		// Enqueue JS and CSS
@@ -50,6 +52,7 @@ class theme
 
 		wp_enqueue_style('themecss', get_template_directory_uri() . '/dist/styles/style.css', array(), $css_cache_buster);
 		wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800', array(), $css_cache_buster);
+		wp_enqueue_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', array('jquery'), '1.0.0', true);
 	}
 }
 new theme();

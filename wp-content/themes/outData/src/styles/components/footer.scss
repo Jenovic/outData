@@ -1,0 +1,163 @@
+.footer {
+  background-color: $sombre-blue;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    position: relative;
+  }
+
+  &__legal {
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &__website {
+      p {
+        margin-bottom: 2em;
+
+        @include bp(lg) {
+          margin: 0;
+        }
+      }
+
+      @include bp(lg) {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+
+    @include bp(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__support-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include bp(lg) {
+      align-items: flex-end;
+    }
+
+    .menu {
+      @include bp(custom, max, $bp-lg) {
+        display: none;
+      }
+    }
+
+    li {
+      text-align: right;
+    }
+
+    .button {
+      font-size: 14px;
+      margin: 0 0 20px !important;
+      text-transform: uppercase;
+
+      @include bp(custom, max, $bp-lg) {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+      }
+    }
+
+    a {
+      margin-bottom: 1em;
+      &.no-decoration {
+        font-size: 16px;
+        line-height: 24px;
+        transition: border-bottom-color ease-in-out 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    ul {
+      li {
+        color: $white;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: right;
+      }
+    }
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 0;
+      margin: 0;
+
+      a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__legal {
+      li {
+        display: inline-block;
+
+        a {
+          color: $grey;
+          font-size: 14px;
+          display: inline;
+        }
+
+        &.menu-item {
+          &:after {
+            margin: 0 0.3em;
+            content: ' | ';
+            text-decoration: none;
+            display: inline;
+          }
+
+          &:last-of-type {
+            &:after {
+              margin: 0;
+              content: '';
+            }
+          }
+        }
+
+        &:after {
+          margin: 0 0.3em;
+          content: ' | ';
+          text-decoration: none;
+          display: inline;
+        }
+      }
+    }
+  }
+}
