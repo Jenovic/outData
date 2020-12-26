@@ -1,0 +1,15 @@
+.hero-article {
+  background-color: $dark-purple;
+  padding: 70px 0;
+
+  &__content {
+    h1 {
+      color: $white;
+    }
+
+    svg {
+      height: 200px;
+      width: 200px;
+    }
+  }
+}

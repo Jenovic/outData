@@ -5,3 +5,27 @@
 .ctrl-white {
   color: $white;
 }
+
+.flex {
+  display: flex;
+}
+
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+.position-center {
+  align-items: center;
+}
+
+.position-bottom {
+  align-items: flex-end;
+}
