@@ -8,8 +8,29 @@
     }
 
     svg {
+      display: none;
       height: 200px;
       width: 200px;
+
+      @include bp(md) {
+        display: block;
+      }
+    }
+
+    .tags {
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 0 25px;
+
+      @include bp(md) {
+        padding: 0;
+      }
+
+      .icon {
+        color: $light-green;
+      }
     }
   }
 }

@@ -28,6 +28,17 @@
   }
 }
 
+%button--tag {
+  border-radius: 21px;
+  margin: 0 10px;
+  padding: 5px;
+  text-transform: capitalize;
+
+  @include bp(md) {
+    margin: 0 5px;
+  }
+}
+
 %button-blue {
   background-color: $blue;
 
@@ -36,13 +47,15 @@
   }
 }
 
-// %button-orange {
-//   background-color: $sunrise;
+%button-white {
+  background-color: $white;
+  color: $dark;
 
-//   &:hover {
-//     background-color: $sunset;
-//   }
-// }
+  &:hover {
+    background-color: $blue-hover;
+    color: $white;
+  }
+}
 
 // scss-lint:disable QualifyingElement
 .button,
@@ -59,13 +72,26 @@ input[type='button'] {
       }
     }
 
-    // &.button--orange {
-    //   background-color: $sunrise;
+    &.button--orange {
+      background-color: $white;
+      color: $dark;
 
-    //   &:hover {
-    //     background-color: $sunset;
-    //   }
-    // }
+      &:hover {
+        background-color: $blue-hover;
+        color: $white;
+      }
+    }
+
+    &.button-tag {
+      border-radius: 21px;
+      margin: 5px;
+      padding: 10px;
+      text-transform: capitalize;
+
+      @include bp(md) {
+        margin: 0 5px;
+      }
+    }
   }
 }
 
@@ -75,10 +101,21 @@ input[type='button'] {
     @extend %button-blue;
   }
 
-  // &--orange,
-  // &.orange {
-  //   @extend %button-orange;
-  // }
+  &--white,
+  &.white {
+    @extend %button-white;
+  }
+
+  &--tag {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    text-transform: capitalize;
+
+    @include bp(md) {
+      margin: 0 5px;
+    }
+  }
 }
 
 button,
@@ -89,9 +126,9 @@ input[type='button'] {
     @extend %button-blue;
   }
 
-  // &[class*='--orange'],
-  // &.button--orange,
-  // &.orange {
-  //   @extend %button-orange;
-  // }
+  &[class*='--white'],
+  &.button--white,
+  &.white {
+    @extend %button-white;
+  }
 }

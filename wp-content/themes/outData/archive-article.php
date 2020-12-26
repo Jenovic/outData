@@ -9,6 +9,11 @@
 					<div class="col is-12 is-6-md is-6-lg flex align-right position-bottom">
 						<?php get_template_part('includes/svgs/article'); ?>
 					</div>
+					<div class="col is-12">
+						<div class="tags">
+							<?php get_template_part('includes/shared/tags'); ?>
+						</div>
+					</div>
 			</div>
 	</div>
 </section>
