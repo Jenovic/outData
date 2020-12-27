@@ -1,0 +1,63 @@
+.tile-article {
+  background-color: $white;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: $navy-blue;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out, width 2s;
+
+  &__content {
+    height: 145px;
+    padding: 0 20px 10px;
+
+    h3 {
+      font-size: 16px;
+      height: 85px;
+      margin: 20px 0;
+    }
+
+    .meta {
+      align-items: center;
+      display: flex;
+      font-size: 14px;
+      justify-content: space-between;
+
+      &_time {
+        span {
+          margin-right: 5px;
+        }
+      }
+
+      &_author {
+        span {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: 50% !important;
+    height: 165px;
+
+    @include bp(md) {
+      background-size: contain !important;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    .tile-article__content {
+      background-color: lighten($navy-blue, 80%);
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

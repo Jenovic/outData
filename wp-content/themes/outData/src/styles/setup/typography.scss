@@ -42,12 +42,22 @@ h1,
 }
 
 h2 {
+  font-size: 1.25em;
+  line-height: 1.3;
 }
 
 h3 {
+  .h3 {
+    font-size: 1em;
+    line-height: 1.3;
+  }
 }
 
-h4 {
+h4,
+.h4 {
+  color: $navy-blue;
+  font-size: 0.75em;
+  line-height: 1.2;
 }
 
 h5 {

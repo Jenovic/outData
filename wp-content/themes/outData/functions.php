@@ -10,6 +10,7 @@ class theme
 
 		// Add custom image sizes here - (name, width, height, crop)
 		add_image_size( 'image-size-name', 500, 500, true );
+		add_image_size( 'archive-thumbnail', 700, 460, true );
 
 		// Add SVG Support
 		add_filter( 'upload_mimes', array( __CLASS__, 'add_svg_to_mime_types' ) );
@@ -27,6 +28,11 @@ class theme
 		// ACF Customisations
 		ACFCustomisations::add_google_api_key_to_acf();
 		ACFCustomisations::add_acf_options_pages();
+	}
+
+	/* Function which displays your post date in time ago format */
+	public static function meks_time_ago() {
+		return human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
 	}
 
 	/**
