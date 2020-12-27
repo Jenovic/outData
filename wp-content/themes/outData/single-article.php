@@ -2,9 +2,13 @@
 
 <section class="article-single-hero">
 	<div class="container">
-		<div class="cols">
-			<div class="col is-12 is-12-md is-2-lg"></div>
+		<div class="cols align-center">
 			<div class="col is-12 is-12-md is-8-lg load-hidden">
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+					}
+				?>
 				<h1 class="article-single-hero__title"><?php echo the_title(); ?></h1>
 				<div class="post_meta_wrapper">
 					<div class="article-single-hero__post_meta">
@@ -22,7 +26,7 @@
 						</div>
 					</div>
 					<div class="article-single-hero__post_socials">
-						<span>Share this article</span>
+						<span>Share this article:</span>
 						<div>
 							<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
 							<a href="https://twitter.com/intent/tweet" class="twitter-share-button"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
@@ -32,19 +36,55 @@
 				</div>
 				<div class="article-single-hero__image" style="background: url(<?php the_post_thumbnail_url('archive-thumbnail'); ?>);"></div>
 			</div>
-			<div class="col is-12 is-12-md is-2-lg"></div>
 		</div>
 	</div>
 </section>
 
 <section class="article-single-content">
 	<div class="container">
-		<div class="cols">
-			<div class="col is-12 is-12-md is-2-lg"></div>
+		<div class="cols align-center">
 			<div class="col is-12 is-12-md is-8-lg load-hidden">
 				<?php the_content(); ?>
 			</div>
-			<div class="col is-12 is-12-md is-2-lg"></div>
+		</div>
+	</div>
+</section>
+
+<section class="article-single__post-body">
+	<div class="container">
+		<div class="cols align-center">
+			<div class="col is-12 is-12-md is-8-lg load-hidden">
+				<div class="socials flex align-right">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
+					<a href="https://twitter.com/intent/tweet" class="twitter-share-button"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
+					<a href="https://www.linkedin.com/sharing/share-offsite"><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
+				</div>
+			</div>
+			<div class="col is-12 is-12-md is-9-lg load-hidden">
+				<div class="tags flex align-center">
+					<?php get_template_part('includes/shared/tags'); ?>
+				</div>
+			</div>
+		</div>
+		<div class="cols related_posts">
+			<div class="col is-12"><h3>Related content</h3></div>
+			<?php 
+				$current_cat = (get_the_category()) ? get_the_category() : false;
+				$related = get_posts( array(
+					'post_type' => 'article',
+					'posts_per_page' => 4,
+					'category' => ($current_cat) ? $current_cat[0]->term_id : '',
+					'post__not_in' => array($post->ID)
+				));
+			
+			?>
+			<?php if ($related) : ?>
+				<?php foreach( $related as $post ) : setup_postdata($post); ?>
+					<div class="col is-12 is-6-md is-3-lg load-hidden">
+						<?php get_template_part('includes/shared/post-tile'); ?>
+					</div>
+				<?php endforeach; wp_reset_postdata(); ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

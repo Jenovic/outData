@@ -70,6 +70,32 @@
 .article-single-hero {
   margin: 50px 0 20px;
 
+  #breadcrumbs {
+    font-family: $font-primary;
+    margin: 0;
+    padding: 30px 0 0;
+
+    span {
+      color: $light-green;
+      font-size: 13px;
+      text-transform: uppercase;
+
+      &.breadcrumb_last {
+        color: $dark-grey;
+      }
+    }
+
+    a {
+      color: $darker-grey;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__title {
     color: $navy-blue;
     font-size: 40px;
@@ -105,6 +131,7 @@
     span,
     .icon {
       color: $navy-blue;
+      padding: 0 0 0 5px;
     }
   }
 
@@ -117,7 +144,7 @@
   .post_meta_wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 60px;
+    padding: 0 0 50px;
   }
 }
 
@@ -146,5 +173,33 @@
   ul {
     color: $dark-grey;
     font-size: 19px;
+  }
+}
+
+.article-single__post-body {
+  .socials {
+    border-bottom: 1px solid $dark-grey;
+    padding: 0 0 10px;
+
+    .icon {
+      color: $navy-blue;
+      padding: 0 0 0 5px;
+    }
+  }
+
+  .tags {
+    padding: 20px 0;
+    .icon {
+      color: $navy-blue;
+    }
+  }
+
+  .related_posts {
+    padding: 0 0 50px;
+
+    h3 {
+      color: $navy-blue;
+      margin: 0;
+    }
   }
 }

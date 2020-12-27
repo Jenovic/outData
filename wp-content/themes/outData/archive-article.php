@@ -53,40 +53,6 @@
 		</div>
 	<?php endforeach; ?>
 
-	<?php	$other = new WP_Query(array(
-			'post_type' => 'Article',
-			'posts_per_page' => 4,
-			'tax_query' => array(
-			array(
-				'taxonomy' => 'article_cat',
-				'field'    => 'slug',
-				'terms'    => 'uncategorized'
-				),
-			),
-		)); 
-	?>
-
-	<?php if (!empty($other)) : ?>
-		<div class="cols">
-			<div class="col is-12 load-hidden">
-				<div class="cat-meta">
-					<h4>Other</h4>
-					<div class="link">
-						<a href="#">View more</a>
-						<span class="icon "><i class="fas fa-arrow-right"></i></span>
-					</div>
-				</div>
-			</div>
-			<?php if ( $other->have_posts() ) : while ( $other->have_posts() ) : $other->the_post(); ?>
-				<div class="col is-12 is-6-md is-3-lg load-hidden">
-					<?php get_template_part('includes/shared/post-tile'); ?>
-				</div>
-			<?php endwhile; endif; ?>
-		</div>
-		</div>
-	<?php endif; ?>
-
-		
 </section>
 
 <?php get_footer(); ?>
