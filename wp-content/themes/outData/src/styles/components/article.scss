@@ -66,3 +66,85 @@
     }
   }
 }
+
+.article-single-hero {
+  margin: 50px 0 20px;
+
+  &__title {
+    color: $navy-blue;
+    font-size: 40px;
+    margin: 30px 0;
+  }
+
+  &__post_meta {
+    align-items: center;
+    display: flex;
+
+    img {
+      width: 25%;
+    }
+
+    &-content {
+      color: $navy-blue;
+      margin-left: 20px;
+
+      .name {
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .time,
+      .icon {
+        font-size: 14px;
+        color: $dark-grey;
+      }
+    }
+  }
+
+  &__post_socials {
+    span,
+    .icon {
+      color: $navy-blue;
+    }
+  }
+
+  &__image {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 200px;
+  }
+
+  .post_meta_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 60px;
+  }
+}
+
+.article-single-content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $navy-blue;
+    margin: 20px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p,
+  ul {
+    color: $dark-grey;
+    font-size: 19px;
+  }
+}
