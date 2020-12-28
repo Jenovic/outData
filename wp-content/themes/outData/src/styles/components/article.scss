@@ -102,9 +102,12 @@
   }
 
   &__post_socials {
-    span,
-    .icon {
+    span {
       color: $navy-blue;
+    }
+
+    .icon {
+      color: $light-green;
       padding: 0 0 0 5px;
     }
   }
@@ -123,16 +126,19 @@
 }
 
 .article-single-content {
-  h1,
-  h2,
-  h3,
-  h4 {
+  h1 {
     color: $navy-blue;
+    font-size: 40px;
     margin: 20px 0;
   }
 
-  h1 {
-    font-size: 40px;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $blue;
+    margin: 20px 0;
   }
 
   h2 {
@@ -156,7 +162,7 @@
     padding: 0 0 10px;
 
     .icon {
-      color: $navy-blue;
+      color: $light-green;
       padding: 0 0 0 5px;
     }
   }
