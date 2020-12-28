@@ -70,32 +70,6 @@
 .article-single-hero {
   margin: 50px 0 20px;
 
-  #breadcrumbs {
-    font-family: $font-primary;
-    margin: 0;
-    padding: 30px 0 0;
-
-    span {
-      color: $light-green;
-      font-size: 13px;
-      text-transform: uppercase;
-
-      &.breadcrumb_last {
-        color: $dark-grey;
-      }
-    }
-
-    a {
-      color: $darker-grey;
-      font-weight: 500;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   &__title {
     color: $navy-blue;
     font-size: 40px;
@@ -201,5 +175,14 @@
       color: $navy-blue;
       margin: 0;
     }
+  }
+}
+
+.article-cat-hero {
+  padding: 50px 0 0;
+
+  h2 {
+    color: $navy-blue;
+    margin: 0;
   }
 }
