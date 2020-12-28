@@ -53,6 +53,7 @@
 
   &:hover {
     background-color: $blue-hover;
+    border: 1px solid $blue-hover;
     color: $white;
   }
 }
@@ -84,17 +85,19 @@ input[type='button'] {
       }
     }
 
-    &.button--orange {
+    &.button--white {
       background-color: $white;
       color: $dark;
 
       &:hover {
         background-color: $blue-hover;
+        border: 1px solid $blue-hover;
         color: $white;
       }
     }
 
     &.button-tag {
+      border: 1px solid $dark;
       border-radius: 21px;
       margin: 5px;
       padding: 10px;
@@ -131,6 +134,7 @@ input[type='button'] {
   }
 
   &--tag {
+    border: 1px solid $dark;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;

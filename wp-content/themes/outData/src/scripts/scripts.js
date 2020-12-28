@@ -139,4 +139,44 @@ document.addEventListener('DOMContentLoaded', () => {
       .querySelector('.menu-item-has-children')
       .addEventListener('click', toggleSubMenu, false);
   }
+
+  if (document.querySelector('#hero-home-heading-animations')) {
+    let typeStrings = document.querySelectorAll(
+      '.hero-home__animation-lineup span',
+    );
+    let stringsArray = [];
+    let quotes = jQuery('.hero-home__panel h2 span');
+    let quoteIndex = -1;
+
+    for (let i = 0; i < typeStrings.length; i++) {
+      let string = typeStrings[i];
+      stringsArray.push(string.innerHTML);
+    }
+
+    let options = {
+      strings: stringsArray,
+      fadeOut: true,
+      typeSpeed: 60,
+      backSpeed: 200,
+      backDelay: 2000,
+      loop: true,
+    };
+
+    if (document.querySelector('.hero-home .fake-h1')) {
+      var typed = new Typed('.hero-home .fake-h1 span', options);
+    } else {
+      var typed = new Typed('.hero-home h1 span', options);
+    }
+
+    function showNextQuote() {
+      ++quoteIndex;
+      quotes
+        .eq(quoteIndex % quotes.length)
+        .fadeIn(1000)
+        .delay(3000)
+        .fadeOut(1000, showNextQuote);
+    }
+
+    showNextQuote();
+  }
 });

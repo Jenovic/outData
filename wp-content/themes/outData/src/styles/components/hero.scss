@@ -2,6 +2,12 @@
   background: $hero-gradient;
   padding: 200px 0 100px;
 
+  &__content {
+    .fake-h1 {
+      height: 180px;
+    }
+  }
+
   .bg-circle {
     background: $circle-blue;
     border-radius: 500px;

@@ -11,7 +11,18 @@ $img = get_field('hero_image');
 			<div class="sm-open-circle"></div>
 			<div class="col is-12 is-6-md load-hidden">
 				<div class="hero-home__content">
-					<h1 class="ctrl-white"><?php the_field('hero_title'); ?></h1>
+						<h3 class="ctrl-white"><?php the_field('hero_pre_title'); ?></h3>
+					
+						<span id="hero-home-heading-animations" class="hero-home__animation-lineup ctrl-white hidden-mobile hidden-tablet hidden-desktop">
+							<span><?php the_field('animation_text_one'); ?></span>
+							<span><?php the_field('animation_text_two'); ?></span>
+							<span><?php the_field('animation_text_three'); ?></span>
+						</span>
+					
+						<p class="fake-h1 h1 ctrl-white">
+						<?php the_field('hero_title'); ?>&nbsp;<span></span>
+						</p>
+					
 					<div class="animated-icons">
 						<a href="" class="">
 							<div>

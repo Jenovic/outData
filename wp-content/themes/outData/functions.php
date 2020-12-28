@@ -59,6 +59,7 @@ class theme
 		wp_enqueue_style('themecss', get_template_directory_uri() . '/dist/styles/style.css', array(), $css_cache_buster);
 		wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800', array(), $css_cache_buster);
 		wp_enqueue_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', array('jquery'), '1.0.0', true);
+		wp_enqueue_script('typejs', 'https://cdn.jsdelivr.net/npm/typed.js@2.0.9', array('jquery'), false);
 	}
 }
 new theme();

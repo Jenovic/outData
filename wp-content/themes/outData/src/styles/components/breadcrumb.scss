@@ -23,3 +23,17 @@
     }
   }
 }
+
+.hero-article {
+  #breadcrumbs {
+    a {
+      color: #888888;
+    }
+
+    span {
+      &.breadcrumb_last {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
-.tile-article {
+.tile-article,
+.featured-tile-article {
   background-color: $white;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: $navy-blue;
@@ -58,6 +59,33 @@
       h3 {
         text-decoration: underline;
       }
+    }
+  }
+
+  &.small {
+    .tile-article__content {
+      height: 104px;
+
+      h3 {
+        height: 45px;
+      }
+    }
+  }
+}
+
+.featured-tile-article {
+  flex-direction: row;
+
+  .tile-article__image {
+    height: 250px;
+    width: 66%;
+  }
+
+  .tile-article__content {
+    height: 240px;
+
+    h3 {
+      height: 170px;
     }
   }
 }
