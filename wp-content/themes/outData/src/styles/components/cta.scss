@@ -1,0 +1,15 @@
+.cta {
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+      color: $navy-blue;
+      font-size: 35px;
+      margin: 0;
+    }
+  }
+}

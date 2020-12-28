@@ -57,6 +57,18 @@
   }
 }
 
+%button-clear {
+  background-color: $white;
+  border: 1px solid $blue;
+  color: $blue;
+
+  &:hover {
+    background-color: $blue-hover;
+    border: 1px solid $blue-hover;
+    color: $white;
+  }
+}
+
 // scss-lint:disable QualifyingElement
 .button,
 button,
@@ -92,6 +104,18 @@ input[type='button'] {
         margin: 0 5px;
       }
     }
+
+    &.button-clear {
+      background-color: $white;
+      border: 1px solid $blue;
+      color: $blue;
+
+      &:hover {
+        background-color: $blue-hover;
+        border: 1px solid $blue-hover;
+        color: $white;
+      }
+    }
   }
 }
 
@@ -116,6 +140,11 @@ input[type='button'] {
       margin: 0 5px;
     }
   }
+
+  &--clear,
+  &.clear {
+    @extend %button-clear;
+  }
 }
 
 button,
@@ -130,5 +159,11 @@ input[type='button'] {
   &.button--white,
   &.white {
     @extend %button-white;
+  }
+
+  &[class*='--clear'],
+  &.button--clear,
+  &.clear {
+    @extend %button-clear;
   }
 }
