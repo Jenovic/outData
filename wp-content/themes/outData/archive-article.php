@@ -5,11 +5,11 @@
 			<div class="cols hero-article__content">
 					<div class="col is-12 is-6-md is-6-lg load-hidden">
 					<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-					}
-				?>
-							<h1>Find here what you're looking for here.</h1>
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+						}
+					?>
+						<h1>Find here what you're looking for here.</h1>
 					</div>
 					<div class="col is-12 is-6-md is-6-lg flex align-right position-bottom load-hidden">
 						<?php get_template_part('includes/svgs/article'); ?>
@@ -33,7 +33,7 @@
 				<div class="cat-meta">
 					<h4><?php echo $term->name; ?></h4>
 					<div class="link">
-						<a href="<?php echo $term->slug; ?>">View more</a>
+						<a href="<?php echo get_term_link($term); ?>">View more</a>
 						<span class="icon "><i class="fas fa-arrow-right"></i></span>
 					</div>
 				</div>
