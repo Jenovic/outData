@@ -2,7 +2,7 @@
 // Template name: Contact
 get_header(); ?>
 <?php
-$img = get_field('about_hero_image');
+$img = get_field('contact_hero_image');
 ?>
 
 <section class="breadcrumb-contact">
@@ -29,14 +29,18 @@ $img = get_field('about_hero_image');
 	</div>
 </section>
 
-<section class="content-about">
+<section class="content-contact">
 	<div class="container">
 		<div class="cols">
 			<div class="col is-12 is-8-md is-8-lg load-hidden">
 				<?php the_content(); ?>
 			</div>
 			<div class="col is-12 is-4-md is-4-lg load-hidden">
-				<h1>Hello</h1>
+				<div class="image_wrapper">
+					<?php if ($img) : ?>
+						<img class="load-hidden" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 	</div>

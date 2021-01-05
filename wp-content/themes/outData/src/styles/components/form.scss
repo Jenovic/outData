@@ -1,16 +1,43 @@
 .wpforms-container {
   background-color: $white !important;
   padding: 20px !important;
+  margin: 50px 0 40px !important;
 
   form {
     .wpforms-field-container {
       label {
         color: $navy-blue;
+        font-size: 14px !important;
+        text-transform: uppercase !important;
       }
 
       input,
       textarea {
         background-color: $light-grey !important;
+        font-family: $font-primary !important;
+        max-width: 100% !important;
+      }
+
+      .wpforms-field-row {
+        &.wpforms-field-medium {
+          max-width: 100% !important;
+        }
+      }
+    }
+
+    .wpforms-submit-container {
+      display: flex;
+      justify-content: center;
+
+      button {
+        background-color: $blue !important;
+        color: $white !important;
+        font-size: 14px !important;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: $blue-hover !important;
+        }
       }
     }
   }

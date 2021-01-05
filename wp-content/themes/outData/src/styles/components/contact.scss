@@ -15,30 +15,11 @@
 
 .hero-contact {
   background-color: $light-green;
-  padding: 100px 0;
+  padding: 70px 0;
 
   h1 {
     color: $navy-blue;
-    text-align: center;
     text-decoration: underline;
-  }
-}
-
-.image-contact {
-  margin: 0 0 20px;
-
-  .container {
-    overflow: visible;
-  }
-
-  .image_wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: -120px;
-
-    img {
-      width: 60%;
-    }
   }
 }
 
@@ -72,5 +53,13 @@
   ul {
     color: $dark-grey;
     font-size: 19px;
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  .image_wrapper {
+    margin-top: -120px;
   }
 }
