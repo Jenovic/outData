@@ -31,7 +31,7 @@ $img = get_field('contact_hero_image');
 
 <section class="content-contact">
 	<div class="container">
-		<div class="cols">
+		<div class="cols content-contact__wrapper">
 			<div class="col is-12 is-8-md is-8-lg load-hidden">
 				<?php the_content(); ?>
 			</div>

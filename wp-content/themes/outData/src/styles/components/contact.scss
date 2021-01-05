@@ -15,11 +15,22 @@
 
 .hero-contact {
   background-color: $light-green;
-  padding: 70px 0;
+  padding: 0 0 120px;
+
+  @include bp(md) {
+    padding: 70px 0;
+  }
 
   h1 {
     color: $navy-blue;
+    font-size: 30px;
+    text-align: center;
     text-decoration: underline;
+
+    @include bp(md) {
+      font-size: 40px;
+      text-align: left;
+    }
   }
 }
 
@@ -60,6 +71,19 @@
   }
 
   .image_wrapper {
-    margin-top: -120px;
+    margin-top: -100px;
+
+    @include bp(md) {
+      margin-top: -120px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include bp(md) {
+      flex-direction: row;
+    }
   }
 }
