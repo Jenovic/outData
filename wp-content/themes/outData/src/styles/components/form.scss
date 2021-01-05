@@ -1,0 +1,17 @@
+.wpforms-container {
+  background-color: $white !important;
+  padding: 20px !important;
+
+  form {
+    .wpforms-field-container {
+      label {
+        color: $navy-blue;
+      }
+
+      input,
+      textarea {
+        background-color: $light-grey !important;
+      }
+    }
+  }
+}

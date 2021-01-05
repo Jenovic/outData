@@ -1,21 +1,30 @@
-.breadcrumb-about {
-  background-color: $light-blue;
+.breadcrumb-contact {
+  background-color: $light-green;
   padding: 60px 0 0;
+
+  #breadcrumbs {
+    span {
+      color: $blue-sky;
+    }
+
+    .breadcrumb_last {
+      color: $dark-grey !important;
+    }
+  }
 }
 
-.hero-about {
-  background-color: $light-blue;
-  padding: 70px 0 120px;
+.hero-contact {
+  background-color: $light-green;
+  padding: 100px 0;
 
   h1 {
     color: $navy-blue;
     text-align: center;
     text-decoration: underline;
-    padding: 0 0 20px;
   }
 }
 
-.image-about {
+.image-contact {
   margin: 0 0 20px;
 
   .container {
@@ -25,15 +34,15 @@
   .image_wrapper {
     display: flex;
     justify-content: center;
-    margin-top: -160px;
+    margin-top: -120px;
 
     img {
-      width: 55%;
+      width: 60%;
     }
   }
 }
 
-.content-about {
+.content-contact {
   margin: 0 0 30px;
 
   h1 {

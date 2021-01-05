@@ -8,7 +8,7 @@ $img = get_field('about_hero_image');
 <section class="breadcrumb-about">
 	<div class="container">
 		<div class="cols align-center">
-			<div class="col is-12 is-10-md is-8-lg load-hidden">
+			<div class="col is-12 is-10-md is-10-lg load-hidden">
 					<?php
 						if ( function_exists('yoast_breadcrumb') ) {
 							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
@@ -22,7 +22,7 @@ $img = get_field('about_hero_image');
 <section class="hero-about">
 	<div class="container">
 		<div class="cols align-center">
-			<div class="col is-12 is-10-md is-8-lg load-hidden">
+			<div class="col is-12 is-10-md is-10-lg load-hidden">
 				<h1><?php the_field('about_hero_title'); ?></h1>
 			</div>
 		</div>
@@ -32,7 +32,7 @@ $img = get_field('about_hero_image');
 <section class="image-about">
 	<div class="container">
 		<div class="cols align-center">
-			<div class="col is-12 is-10-md is-8-lg">
+			<div class="col is-12 is-10-md is-10-lg">
 				<div class="image_wrapper">
 					<?php if ($img) : ?>
 						<img class="load-hidden" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
