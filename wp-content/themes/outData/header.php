@@ -20,7 +20,9 @@
 
 <header class="header" id="js-header">
 		<div class="container">
-			<a href="/" class="header__logo"></a>
+		<a href="/" class="header__logo">
+					<?php get_template_part('includes/svgs/logo'); ?>
+				</a>
 		
 			<nav class="header__nav">
 				<?php wp_nav_menu(

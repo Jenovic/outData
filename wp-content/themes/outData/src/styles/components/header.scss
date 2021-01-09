@@ -55,8 +55,7 @@
     }
 
     [class*='__toggle'] {
-      top: 13px;
-
+      top: 17px;
       @include bp(md) {
         top: 24px;
       }
@@ -111,6 +110,15 @@
 
     .button {
       margin: 0.5em 0;
+      background-color: $light-green;
+
+      @include bp(lg) {
+        background-color: $blue;
+
+        &:hover {
+          background-color: $blue-hover;
+        }
+      }
     }
   }
 
@@ -156,7 +164,7 @@
   &__toggle {
     position: fixed;
     right: 12px;
-    top: 13px;
+    top: 17px;
     transition: top 0.25s ease-in-out;
     z-index: 9999;
 
@@ -726,10 +734,10 @@
     }
 
     &__toggle {
-      top: 51px;
+      top: 63px;
 
       @include bp(custom, min, 782px) {
-        top: 37px;
+        top: 50px;
       }
     }
   }
@@ -815,7 +823,7 @@ $hamburger-hover-filter: opacity(50%) !default;
   &::after {
     background: $hamburger-layer-color;
     border-radius: $hamburger-layer-border-radius;
-    height: $hamburger-layer-height;
+    height: $hamburger-layer-height + 1;
     position: absolute;
     transition-duration: 0.15s;
     transition-property: transform, background-color;
