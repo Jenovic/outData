@@ -1,6 +1,10 @@
 .hero-article {
   background-color: $dark-purple;
-  padding: 100px 0;
+  padding: 60px 0 30px;
+
+  @include bp(md) {
+    padding: 100px 0;
+  }
 
   &__content {
     h1 {
@@ -48,6 +52,11 @@
   .cat-meta {
     display: flex;
     justify-content: space-between;
+    padding: 0 0 20px;
+
+    @include bp(md) {
+      padding: 0;
+    }
 
     h4 {
       font-size: 16px;
