@@ -5,8 +5,13 @@
   color: $navy-blue;
   display: flex;
   flex-direction: column;
+  margin: 0 0 20px;
   text-decoration: none;
   transition: all 0.2s ease-in-out, width 2s;
+
+  @include bp(md) {
+    margin: 0;
+  }
 
   &__content {
     height: 145px;
@@ -45,9 +50,9 @@
     background-position: 50% !important;
     height: 165px;
 
-    @include bp(md) {
-      background-size: contain !important;
-    }
+    // @include bp(lg) {
+    //   background-size: contain !important;
+    // }
   }
 
   &:hover {
@@ -78,7 +83,11 @@
 
   .tile-article__image {
     height: 250px;
-    width: 66%;
+    width: 100%;
+
+    @include bp(lg) {
+      width: 66%;
+    }
   }
 
   .tile-article__content {

@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="tile-article small">
+<a href="<?php the_permalink(); ?>" class="tile-article small load-hidden">
 	<div class="tile-article__content">
 		<h3><?php the_title(); ?></h3>
 		<div class="meta">

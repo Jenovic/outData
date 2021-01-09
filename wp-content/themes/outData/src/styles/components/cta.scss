@@ -1,6 +1,16 @@
 .cta {
   margin: 40px 0;
 
+  &-image {
+    img {
+      width: 100%;
+
+      @include bp(lg) {
+        width: 80%;
+      }
+    }
+  }
+
   &-content {
     align-items: center;
     display: flex;
@@ -10,8 +20,20 @@
     h1 {
       text-align: center;
       color: $navy-blue;
-      font-size: 35px;
+      font-size: 25px;
       margin: 0;
+
+      @include bp(md) {
+        font-size: 35px;
+      }
+    }
+
+    &__button {
+      padding: 0 0 50px;
+
+      @include bp(md) {
+        padding: 0;
+      }
     }
   }
 }

@@ -29,7 +29,9 @@
       }
 
       .icon {
+        align-items: center;
         color: $light-green;
+        display: flex;
       }
     }
   }
