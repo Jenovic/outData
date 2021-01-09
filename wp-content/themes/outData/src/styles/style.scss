@@ -1,3 +1,7 @@
 @import 'external/all';
 @import 'setup/all';
 @import 'components/all';
+
+body {
+  overflow-x: hidden;
+}

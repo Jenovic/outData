@@ -134,13 +134,16 @@ input[type='button'] {
   }
 
   &--tag {
+    align-items: center;
     border: 1px solid $dark;
     border-radius: 10px;
+    display: flex;
     margin: 5px;
     padding: 10px;
     text-transform: capitalize;
 
     @include bp(md) {
+      display: block;
       margin: 0 5px;
     }
   }

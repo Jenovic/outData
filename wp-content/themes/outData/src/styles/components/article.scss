@@ -83,8 +83,12 @@
 
   &__title {
     color: $navy-blue;
-    font-size: 40px;
+    font-size: 30px;
     margin: 30px 0;
+
+    @include bp(md) {
+      font-size: 40px;
+    }
   }
 
   &__post_meta {
@@ -139,8 +143,12 @@
 .article-single-content {
   h1 {
     color: $navy-blue;
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px 0;
+
+    @include bp(md) {
+      font-size: 40px;
+    }
   }
 
   h2,
@@ -172,6 +180,10 @@
     border-bottom: 1px solid $dark-grey;
     padding: 0 0 10px;
 
+    a {
+      text-decoration: none;
+    }
+
     .icon {
       color: $light-green;
       padding: 0 0 0 5px;
@@ -181,16 +193,34 @@
   .tags {
     padding: 20px 0;
     .icon {
+      align-items: center;
       color: $navy-blue;
+      display: flex;
     }
   }
 
   .related_posts {
-    padding: 0 0 50px;
+    padding: 20px 0 50px;
 
-    h3 {
-      color: $navy-blue;
-      margin: 0;
+    @include bp(md) {
+      padding: 0 0 50px;
+    }
+
+    &-title {
+      padding: 0 0 10px;
+
+      @include bp(md) {
+        padding: 0;
+      }
+
+      span {
+        color: $navy-blue;
+        font-weight: bold;
+
+        @include bp(md) {
+          font-size: 17px;
+        }
+      }
     }
   }
 }
@@ -200,6 +230,10 @@
 
   h2 {
     color: $navy-blue;
-    margin: 0;
+    margin: 20px 0;
+
+    @include bp(md) {
+      margin: 0;
+    }
   }
 }

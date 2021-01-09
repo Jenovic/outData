@@ -5,12 +5,17 @@
 
 .hero-about {
   background-color: $light-blue;
-  padding: 70px 0 120px;
+  padding: 0 0 120px;
+
+  @include bp(lg) {
+    padding: 70px 0 120px;
+  }
 
   h1 {
     color: $navy-blue;
     text-align: center;
     text-decoration: underline;
+    text-transform: uppercase;
     padding: 0 0 20px;
   }
 }
@@ -25,10 +30,16 @@
   .image_wrapper {
     display: flex;
     justify-content: center;
-    margin-top: -160px;
+    margin-top: -130px;
+
+    @include bp(md) {
+      margin-top: -140px;
+    }
 
     img {
-      width: 55%;
+      @include bp(lg) {
+        width: 80%;
+      }
     }
   }
 }

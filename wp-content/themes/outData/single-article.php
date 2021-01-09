@@ -67,7 +67,9 @@
 			</div>
 		</div>
 		<div class="cols related_posts">
-			<div class="col is-12"><h3>Related content</h3></div>
+			<div class="col is-12">
+				<div class="related_posts-title"><span>Related content</span></div>
+			</div>
 			<?php 
 				$current_cat = (get_the_category()) ? get_the_category() : false;
 				$related = get_posts( array(

@@ -26,6 +26,7 @@
     font-size: 30px;
     text-align: center;
     text-decoration: underline;
+    text-transform: uppercase;
 
     @include bp(md) {
       font-size: 40px;
