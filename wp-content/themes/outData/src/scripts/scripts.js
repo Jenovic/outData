@@ -179,4 +179,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showNextQuote();
   }
+
+  function scrollToLatest() {
+    document.querySelector('#latest-posts').scrollIntoView();
+  }
+
+  // if (document.querySelector('.started')) {
+  //   document
+  //     .querySelector('.started')
+  //     .addEventListener('click', scrollToLatest, false);
+  // }
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
 });

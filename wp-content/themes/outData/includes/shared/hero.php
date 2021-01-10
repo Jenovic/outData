@@ -56,8 +56,12 @@ $img = get_field('hero_image');
 								</span>
 							</div>
 						</a>
+						<div class="vl"></div>
+						<div class="description">
+							<p class="ctrl-white"><?php the_field('hero_description'); ?></p>
+							<a href="/article" class="started">Getting started <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
+						</div>
 					</div>
-					<p class="ctrl-white"><?php the_field('hero_description'); ?></p>
 				</div>
 			</div>
 			<div class="col is-12 is-6-md">
