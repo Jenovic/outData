@@ -1,0 +1,102 @@
+.archive-search {
+  padding: 90px 0;
+
+  h1 {
+    font-size: 2.375em;
+
+    @include bp(md) {
+      font-size: 3.375em;
+    }
+  }
+
+  .search-result {
+    a {
+      text-decoration: none;
+      h4 {
+        color: $blue;
+        font-size: 20px;
+        margin: 0 0 10px;
+        text-decoration: underline;
+      }
+    }
+
+    h6 {
+      color: $grey;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      height: 50px;
+      margin-bottom: 40px;
+      padding: 0 0 80px;
+      overflow: hidden;
+
+      @include bp(md) {
+        margin-bottom: 30px;
+        padding: 0 0 40px;
+      }
+
+      @include bp(md) {
+        padding: 0 0 60px;
+      }
+    }
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+    margin: 0 0 30px;
+    position: relative;
+    width: 100%;
+
+    @include bp(md) {
+      width: 80%;
+    }
+
+    @include bp(lg) {
+      width: 60%;
+    }
+
+    input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
+      border: 1px solid $black;
+      border-radius: 30px;
+      color: $black;
+      font-size: 20px;
+      padding: 16px 24px;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      background-image: url('../assets/icon-search.svg');
+      background-repeat: no-repeat;
+      border: 0;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      margin: 5px -10px 0 1px;
+      border-radius: 0;
+      position: absolute;
+      right: 20px;
+      top: 30%;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    label {
+      display: none;
+    }
+
+    div {
+      width: 100%;
+    }
+  }
+}
