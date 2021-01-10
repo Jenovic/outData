@@ -1,0 +1,21 @@
+.stacked-padding {
+  background: url('../../src/assets/404.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  color: $white;
+  padding: 100px 0 200px;
+
+  @include bp(md) {
+    color: $white;
+    padding: 300px 0;
+  }
+
+  .button {
+    margin: 1em 0.5em 20px 0px;
+
+    @include bp(md) {
+      margin: 1em 0.5em 0 0;
+    }
+  }
+}
