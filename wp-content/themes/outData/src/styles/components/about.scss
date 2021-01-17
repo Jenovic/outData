@@ -37,6 +37,16 @@
     }
 
     img {
+      @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+        height: 200px;
+        width: 65%;
+
+        @include bp(lg) {
+          width: 100%;
+          height: auto;
+        }
+      }
+
       @include bp(lg) {
         width: 80%;
       }
