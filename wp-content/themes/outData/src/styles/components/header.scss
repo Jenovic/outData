@@ -59,6 +59,9 @@
       @include bp(md) {
         top: 30px;
       }
+      @include bp(lg) {
+        top: 24px;
+      }
     }
   }
 
@@ -749,6 +752,10 @@
 
         @include bp(custom, min, 782px) {
           top: 60px;
+        }
+
+        @include bp(lg) {
+          top: 24px;
         }
       }
     }

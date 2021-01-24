@@ -1,0 +1,29 @@
+#moove_gdpr_cookie_info_bar {
+  border-top: 5px solid $white !important;
+  min-height: 0px !important;
+}
+
+.moove-gdpr-info-bar-container {
+  padding: 10px 30px !important;
+}
+
+.moove-gdpr-info-bar-content {
+  font-family: $font-primary !important;
+  padding: 0 !important;
+
+  p {
+    color: $white !important;
+  }
+}
+
+.moove-gdpr-infobar-allow-all {
+  background-color: $blue !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $blue-hover !important;
+    color: $white !important;
+  }
+}

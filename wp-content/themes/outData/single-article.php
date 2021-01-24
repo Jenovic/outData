@@ -28,9 +28,9 @@
 					<div class="article-single-hero__post_socials">
 						<span>Share this article:</span>
 						<div>
-							<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
-							<a href="https://twitter.com/intent/tweet" class="twitter-share-button"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
-							<a href="https://www.linkedin.com/sharing/share-offsite"><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
+							<a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article%20on%20outdata.com%20-%20<?php the_permalink(); ?>" class="twitter-share-button" target="blank"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
+							<a target="blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=I%20found%20this%20article%20on%20outdata.com&summary=&source="><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
 						</div>
 					</div>
 				</div>
@@ -55,9 +55,9 @@
 		<div class="cols align-center">
 			<div class="col is-12 is-12-md is-8-lg load-hidden">
 				<div class="socials flex align-right">
-					<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
-					<a href="https://twitter.com/intent/tweet" class="twitter-share-button"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
-					<a href="https://www.linkedin.com/sharing/share-offsite"><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
+					<a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article%20on%20outdata.com%20-%20<?php the_permalink(); ?>" class="twitter-share-button" target="blank"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
+					<a target="blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=I%20found%20this%20article%20on%20outdata.com&summary=&source="><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
 				</div>
 			</div>
 			<div class="col is-12 is-12-md is-9-lg load-hidden">
