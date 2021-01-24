@@ -55,9 +55,9 @@
     }
 
     [class*='__toggle'] {
-      top: 17px;
+      top: 30px;
       @include bp(md) {
-        top: 24px;
+        top: 30px;
       }
     }
   }
@@ -131,7 +131,7 @@
     box-sizing: border-box;
     float: left;
     height: 55px;
-    margin-right: 60px;
+    margin: 10px 60px 5px 10px;
     padding-left: 20px;
     position: relative;
     text-decoration: none;
@@ -139,6 +139,7 @@
     z-index: 1;
 
     @include bp(lg) {
+      margin: 0 60px 0 0;
       padding-left: 0;
     }
 
@@ -164,7 +165,7 @@
   &__toggle {
     position: fixed;
     right: 12px;
-    top: 17px;
+    top: 30px;
     transition: top 0.25s ease-in-out;
     z-index: 9999;
 
@@ -734,10 +735,20 @@
     }
 
     &__toggle {
-      top: 63px;
+      top: 75px;
 
       @include bp(custom, min, 782px) {
-        top: 50px;
+        top: 60px;
+      }
+    }
+
+    &.scrolled {
+      [class*='__toggle'] {
+        top: 75px;
+
+        @include bp(custom, min, 782px) {
+          top: 60px;
+        }
       }
     }
   }

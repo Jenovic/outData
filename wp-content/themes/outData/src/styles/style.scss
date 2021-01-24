@@ -2,11 +2,9 @@
 @import 'setup/all';
 @import 'components/all';
 
-body {
+body,
+html {
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
-
-// #latest-posts {
-//   position: absolute;
-//   top: 95%;
-// }

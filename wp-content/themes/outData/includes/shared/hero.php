@@ -24,6 +24,7 @@ $img = get_field('hero_image');
 						</p>
 					
 					<div class="animated-icons">
+					<div class="animated-icons-wrapper">
 						<a href="" class="">
 							<div>
 								<span></span><span></span><span></span><span></span>
@@ -56,6 +57,7 @@ $img = get_field('hero_image');
 								</span>
 							</div>
 						</a>
+					</div>
 						<div class="vl"></div>
 						<div class="description">
 							<p class="ctrl-white"><?php the_field('hero_description'); ?></p>
