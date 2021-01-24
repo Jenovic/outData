@@ -585,7 +585,7 @@
 
   &.is-active {
     [class*='__actions'] {
-      bottom: 0;
+      bottom: 30%;
       opacity: 1;
       pointer-events: all;
     }
@@ -607,6 +607,7 @@
     position: fixed;
     transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
     width: 100%;
+    z-index: 9999;
 
     @include bp(lg) {
       background-color: transparent;
