@@ -1,0 +1,19 @@
+.default-template {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $blue;
+  }
+
+  p,
+  ul,
+  li {
+    color: $dark;
+  }
+
+  a {
+    color: $light-green;
+  }
+}

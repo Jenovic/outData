@@ -14,14 +14,14 @@
 							<a class="button button--blue" href="/contact-us">Contact us</a>
 
 							<ul class="menu">
-								<li class="menu-item">outdata@gmail.com</li>
+								<li class="menu-item">info@outdata.com</li>
 								<li class="menu-item">0123456789</li>
 							</ul>
             </div>
             <div class="col is-12 footer__legal">
                 <div class="footer__legal__pages">
                     <ul class="menu menu__legal">
-                        <li>&copy; outData <?php echo date('Y'); ?></li>
+                        <li>&copy; outdata <?php echo date('Y'); ?></li>
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer_legal',

@@ -96,3 +96,13 @@ blockquote {
   .source {
   }
 }
+
+.code {
+  color: $dark;
+  background-color: #e4e4e4;
+  padding: 30px;
+
+  p {
+    margin: 0;
+  }
+}
