@@ -6,9 +6,15 @@ $img = get_field('hero_image');
 	<div class="container">
 		<div class="cols">
 			<div class="bg-circle"></div>
-			<div class="sm-circle"></div>
 			<div class="bg-open-circle"></div>
 			<div class="sm-open-circle"></div>
+			<div class="sm-circle">
+				<div class="spoke"></div>
+				<div class="spoke"></div>
+				<div class="spoke"></div>
+				<div class="spoke"></div>
+				<div class="hole"></div>
+			</div>
 			<div class="col is-12 is-6-md load-hidden">
 				<div class="hero-home__content">
 						<h3 class="ctrl-white"><?php the_field('hero_pre_title'); ?></h3>
@@ -75,4 +81,5 @@ $img = get_field('hero_image');
 			</div>
 		</div>
 	</div>
+	<div class="custom-shape-wrap custom-shape-bottom-type-3"><div class="shape-container"><svg width="100%" height="131px"><defs><pattern id="custom-shape-bottom-type-3-f0acbaaca1f6026daf77b2c0c046c81d" preserveAspectRatio="none" style="background-repeat: no-repeat;" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="131px" viewBox="0 0 100 130"><polygon fill="#f5f5f5" "="" points="100,0 100,130 -1,130 "></polygon></pattern></defs><rect x="0" y="0" width="100%" height="131px" fill="url(#custom-shape-bottom-type-3-f0acbaaca1f6026daf77b2c0c046c81d)"></rect></svg></div></div>
 </section>

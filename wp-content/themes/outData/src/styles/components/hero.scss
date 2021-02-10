@@ -1,13 +1,20 @@
 .hero-home {
   background: $hero-gradient;
   padding: 100px 0;
+  position: relative;
 
   @include bp(md) {
     padding: 150px 0 100px;
   }
 
   @include bp(lg) {
-    padding: 200px 0 100px;
+    padding: 200px 0;
+  }
+
+  &__image {
+    img {
+      border-radius: 50%;
+    }
   }
 
   &__content {
@@ -101,14 +108,55 @@
   }
 
   .sm-circle {
-    background: $light-green;
-    border-radius: 100px;
-    height: 80px;
-    right: 47%;
-    opacity: 0.5;
-    position: absolute;
+    animation: spin 5s infinite linear;
+    background-color: $light-green;
+    border-radius: 50%;
+    height: 150px;
     margin: 250px 0 0 580px;
-    width: 80px;
+    opacity: 0.2;
+    position: absolute;
+    right: 47%;
+    width: 150px;
+
+    @include bp(lg) {
+      opacity: 1;
+    }
+
+    .spoke {
+      background-color: $light-green;
+      position: absolute;
+      height: 175px;
+      width: 30px;
+      margin-left: -15px;
+      margin-top: -12.5px;
+      left: 50%;
+      border-radius: 5px;
+      z-index: 10;
+    }
+
+    .spoke + .spoke {
+      transform: rotateZ(45deg);
+    }
+
+    .spoke + .spoke + .spoke {
+      transform: rotateZ(-45deg);
+    }
+
+    .spoke + .spoke + .spoke + .spoke {
+      transform: rotateZ(90deg);
+    }
+
+    // .hole {
+    //   position: absolute;
+    //   width: 130px;
+    //   height: 130px;
+    //   margin-left: 10px;
+    //   margin-top: 10px;
+    //   background-color: $light-green;
+    //   border-radius: 50%;
+    //   z-index: 3000;
+    //   box-shadow: inset 0 0 90px darkslategray;
+    // }
   }
 
   .bg-open-circle {
@@ -120,9 +168,14 @@
     overflow: hidden;
     position: absolute;
     right: 20%;
-    bottom: 20%;
+    bottom: 21%;
     margin: 0px -200px -190px 0px;
     width: 700px;
+    animation: spin 8s infinite linear;
+
+    @include bp(lg) {
+      opacity: 1;
+    }
   }
 
   .sm-open-circle {
@@ -136,6 +189,11 @@
     right: 20%;
     bottom: 20%;
     width: 400px;
+    animation: spin 8s infinite linear;
+
+    @include bp(lg) {
+      opacity: 1;
+    }
   }
 
   .animated-icons {
@@ -260,5 +318,25 @@
         border-color: $yellow-bright;
       }
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-color: $light-green;
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: 0;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }

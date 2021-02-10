@@ -6,9 +6,10 @@
 .hero-about {
   background-color: $light-blue;
   padding: 0 0 120px;
+  position: relative;
 
   @include bp(lg) {
-    padding: 70px 0 120px;
+    padding: 0 0 170px;
   }
 
   h1 {
@@ -33,22 +34,31 @@
     margin-top: -130px;
 
     @include bp(md) {
-      margin-top: -140px;
+      margin-top: -150px;
     }
 
     img {
+      border-radius: 50%;
+      z-index: 10;
+
       @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
         height: 200px;
-        width: 65%;
+        width: 200px;
 
         @include bp(lg) {
-          width: 100%;
-          height: auto;
+          width: 500px;
+          height: 500px;
         }
       }
 
+      @include bp(md) {
+        height: 350px;
+        width: 350px;
+      }
+
       @include bp(lg) {
-        width: 80%;
+        width: 500px;
+        height: 500px;
       }
     }
   }

@@ -1,0 +1,27 @@
+.custom-shape-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  box-sizing: border-box;
+}
+
+.hero-home {
+  .custom-shape-wrap {
+    bottom: -7px;
+    transform: scaleX(-1);
+  }
+}
+
+.hero-about {
+  .custom-shape-wrap {
+    bottom: -20px;
+    transform: scaleX(-1);
+  }
+}
+
+.hero-contact {
+  .custom-shape-wrap {
+    z-index: 0;
+  }
+}
