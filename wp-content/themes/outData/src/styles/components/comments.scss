@@ -10,8 +10,6 @@
     }
 
     form {
-      display: none;
-
       input {
         border: 1px solid $white;
         padding: 10px 15px;
@@ -159,7 +157,7 @@
 
     .comment-form-flex {
       form {
-        display: block;
+        display: none;
 
         .logged-in-as {
           a:first-child {

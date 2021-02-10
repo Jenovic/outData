@@ -121,7 +121,7 @@ $discussion = outdata_get_discussion_data();
 	else :
 
 		// Show comment form.
-		outdata_comment_form( true );
+		comment_form();
 
 	endif; // if have_comments();
 	?>
