@@ -1,0 +1,107 @@
+#comments {
+  &.comments-area {
+    h2 {
+      color: $navy-blue;
+      font-size: 30px;
+    }
+
+    .comment-reply-title {
+      display: none;
+    }
+
+    form {
+      .comment-form-comment {
+        label {
+          display: none;
+        }
+
+        textarea {
+          width: 100%;
+        }
+      }
+
+      .form-submit {
+        input {
+          &.submit {
+            background-color: $light-green;
+            border: 0;
+            box-shadow: none;
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            font-family: $font-primary;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 1;
+            margin: 1em 0.5em 0 0;
+            padding: 16px 20px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition-duration: 0.25s;
+            transition-property: color, background-color;
+            transition-timing-function: ease-in-out;
+
+            &:hover {
+              background-color: darken($light-green, 10%);
+            }
+          }
+        }
+      }
+    }
+
+    .comment-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        .comment-body {
+          position: relative;
+
+          .comment-author {
+            &.vcard {
+              display: flex;
+
+              img {
+                width: 5%;
+              }
+
+              cite {
+                color: $navy-blue;
+                font-style: normal;
+                margin: 0 10px;
+                text-transform: capitalize;
+
+                a {
+                  color: $navy-blue;
+                  text-decoration: none;
+                }
+              }
+
+              .says {
+                display: none;
+              }
+            }
+          }
+
+          .comment-meta {
+            padding: 10px 0 0;
+
+            a {
+              color: $dark-grey;
+              font-size: 14px;
+              left: 46px;
+              position: absolute;
+              text-decoration: none;
+              top: 21px;
+            }
+          }
+        }
+        .children {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

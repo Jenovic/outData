@@ -60,10 +60,17 @@
 					<a target="blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=I%20found%20this%20article%20on%20outdata.com&summary=&source="><span class="icon "><i class="fab fa-linkedin fa-lg"></i></span></a>
 				</div>
 			</div>
-			<div class="col is-12 is-12-md is-9-lg load-hidden">
+			<div class="col is-12 is-12-md is-8-lg load-hidden">
 				<div class="tags flex align-center">
 					<?php get_template_part('includes/shared/tags'); ?>
 				</div>
+			</div>
+			<div class="col is-12 is-12-md is-8-lg load-hidden">
+				<?php 
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					} 
+				?>
 			</div>
 		</div>
 		<div class="cols related_posts">

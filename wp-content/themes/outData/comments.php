@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying comments
@@ -86,15 +87,15 @@ $discussion = outdata_get_discussion_data();
 
 		// Show comment navigation
 		if ( have_comments() ) :
-			$prev_icon     = outdata_get_icon_svg( 'chevron_left', 22 );
-			$next_icon     = outdata_get_icon_svg( 'chevron_right', 22 );
+			// $prev_icon     = outdata_get_icon_svg( 'chevron_left', 22 );
+			// $next_icon     = outdata_get_icon_svg( 'chevron_right', 22 );
 			$comments_text = __( 'Comments', 'outdata' );
-			the_comments_navigation(
-				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'outdata' ), __( 'Comments', 'outdata' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'outdata' ), __( 'Comments', 'outdata' ), $next_icon ),
-				)
-			);
+			// the_comments_navigation(
+			// 	array(
+			// 		'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'outdata' ), __( 'Comments', 'outdata' ) ),
+			// 		'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'outdata' ), __( 'Comments', 'outdata' ), $next_icon ),
+			// 	)
+			// );
 		endif;
 
 		// Show comment form at bottom if showing newest comments at the bottom.
@@ -102,7 +103,7 @@ $discussion = outdata_get_discussion_data();
 			?>
 			<div class="comment-form-flex">
 				<span class="screen-reader-text"><?php _e( 'Leave a comment', 'outdata' ); ?></span>
-				<?php outdata_comment_form( 'asc' ); ?>
+				<?php comment_form( 'asc' ); ?>
 				<h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'outdata' ); ?></h2>
 			</div>
 			<?php
