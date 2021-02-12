@@ -14,8 +14,8 @@
 							<a class="button button--blue" href="/contact-us">Contact us</a>
 
 							<ul class="menu">
-								<li class="menu-item">info@outdata.com</li>
-								<li class="menu-item">0123456789</li>
+								<li class="menu-item">info.outdata@gmail.com</li>
+								<!-- <li class="menu-item">0123456789</li> -->
 							</ul>
             </div>
             <div class="col is-12 footer__legal">
