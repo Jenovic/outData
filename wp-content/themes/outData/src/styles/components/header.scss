@@ -18,14 +18,6 @@
       padding: 0;
     }
 
-    [class*='__logo'] {
-      @include bp(lg) {
-        svg {
-          max-width: 180px;
-        }
-      }
-    }
-
     [class*='__nav'] {
       li {
         > a {
@@ -49,9 +41,7 @@
     }
 
     [class*='__actions'] {
-      @include bp(lg) {
-        padding: 0.34375em 2.13333em;
-      }
+      padding: 0;
     }
 
     [class*='__toggle'] {
@@ -80,6 +70,10 @@
     }
   }
 
+  &__logo {
+    transition: background-size 0.25s ease-in-out;
+  }
+
   &__actions {
     align-items: center;
     bottom: -100px;
@@ -104,7 +98,7 @@
       display: block;
       margin-left: 25px;
       opacity: 1;
-      padding: 0;
+      padding: 10px 0;
       pointer-events: all;
       position: static;
       transform: translateX(0%);
