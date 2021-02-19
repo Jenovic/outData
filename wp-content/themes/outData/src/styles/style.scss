@@ -7,4 +7,9 @@ html {
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
+
+  &.mode-dark {
+    color: $body-dark;
+    background: $body-dark;
+  }
 }
