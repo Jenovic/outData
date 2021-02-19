@@ -919,3 +919,32 @@ $hamburger-hover-filter: opacity(50%) !default;
     background-color: $blue;
   }
 }
+
+.back-to-top {
+  display: none;
+
+  @include bp(md) {
+    bottom: 50px;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0.2;
+    padding: 10px;
+    position: fixed;
+    right: 70px;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 100;
+
+    path {
+      fill: $light-green;
+      transition: fill 0.25s ease-in-out;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      path {
+        fill: $blue;
+      }
+    }
+  }
+}

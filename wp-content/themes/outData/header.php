@@ -60,3 +60,9 @@
 			</div>
 		</div>
 	</header>
+
+<div id="top"></div>
+
+<a class="back-to-top" href="#top">
+	<svg width="50" height="23" viewBox="0 0 50 23" xmlns="https://www.w3.org/2000/svg"><title>Shape</title><path d="M24.829 0L49.67 20.062l-1.7 2.12L24.83 3.49 1.7 22.183 0 20.063z" fill="#222"/></svg>
+</a>
