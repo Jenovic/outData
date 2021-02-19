@@ -79,6 +79,18 @@
   }
 }
 
+.mode-dark {
+  .archive-article {
+    .cat-meta {
+      h4,
+      a,
+      .link {
+        color: $blue;
+      }
+    }
+  }
+}
+
 .article-single-hero {
   margin: 50px 0 20px;
 
