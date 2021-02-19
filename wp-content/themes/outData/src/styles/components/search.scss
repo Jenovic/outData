@@ -2,6 +2,7 @@
   padding: 90px 0;
 
   h1 {
+    color: $navy-blue;
     font-size: 2.375em;
 
     @include bp(md) {
@@ -97,6 +98,20 @@
 
     div {
       width: 100%;
+    }
+  }
+}
+
+.mode-dark {
+  .archive-search {
+    h1 {
+      color: $white;
+    }
+
+    .search-result {
+      p {
+        color: $white;
+      }
     }
   }
 }
