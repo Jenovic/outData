@@ -5,7 +5,8 @@
     padding: 0 20px;
   }
 
-  &-image {
+  &-image,
+  &-image-dark {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +18,10 @@
         width: 80%;
       }
     }
+  }
+
+  &-image-dark {
+    display: none;
   }
 
   &-content {
@@ -41,6 +46,32 @@
 
       @include bp(md) {
         padding: 0;
+      }
+    }
+  }
+}
+
+.mode-dark {
+  .cta {
+    .col {
+      background-color: $header-black;
+    }
+
+    &-image {
+      display: none;
+    }
+
+    &-image-dark {
+      display: block;
+    }
+
+    &-content {
+      h1 {
+        color: $white;
+      }
+
+      .button--clear {
+        border: 0;
       }
     }
   }

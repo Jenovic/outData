@@ -1,5 +1,6 @@
 <?php
 $img = get_field('cta_image');
+$img_dark = get_field('cta_image_dark_mode');
 ?>
 <section class="cta">
 	<div class="container">
@@ -8,6 +9,12 @@ $img = get_field('cta_image');
 				<div class="cta-image ">
 					<?php if ($img) : ?>
 						<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+					<?php endif; ?>
+				</div>
+
+				<div class="cta-image-dark">
+					<?php if ($img_dark) : ?>
+						<img src="<?php echo $img_dark['url']; ?>" alt="<?php echo $img_dark['alt']; ?>">
 					<?php endif; ?>
 				</div>
 			</div>

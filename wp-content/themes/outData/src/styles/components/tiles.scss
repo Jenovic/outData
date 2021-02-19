@@ -98,3 +98,17 @@
     }
   }
 }
+
+.mode-dark {
+  .tile-article,
+  .featured-tile-article {
+    background-color: $header-black;
+    color: $white;
+
+    &:hover {
+      .tile-article__content {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

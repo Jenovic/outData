@@ -24,3 +24,15 @@
     flex: 1;
   }
 }
+
+.mode-dark {
+  .latest-posts {
+    &_title {
+      h1,
+      a,
+      .icon {
+        color: $blue;
+      }
+    }
+  }
+}
