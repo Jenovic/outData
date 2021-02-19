@@ -96,3 +96,18 @@
     font-size: 19px;
   }
 }
+
+.mode-dark {
+  .content-about {
+    h1 {
+      color: $blue;
+    }
+
+    p,
+    ul,
+    li,
+    span {
+      color: $white;
+    }
+  }
+}

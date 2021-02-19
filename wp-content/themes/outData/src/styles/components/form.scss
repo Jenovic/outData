@@ -46,3 +46,23 @@
     }
   }
 }
+
+.mode-dark {
+  .wpforms-container {
+    background-color: $header-black !important;
+
+    form {
+      .wpforms-field-container {
+        label {
+          color: $white !important;
+        }
+      }
+
+      .wpforms-submit-container {
+        button {
+          border: 0;
+        }
+      }
+    }
+  }
+}
