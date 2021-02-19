@@ -4,7 +4,7 @@
   position: relative;
 
   @include bp(md) {
-    padding: 150px 0 100px;
+    padding: 120px 0;
   }
 
   @include bp(lg) {
@@ -34,33 +34,25 @@
       }
     }
 
-    .vl {
-      border-left: 1px solid $white;
-      height: 110px;
-      margin: 0 1em;
-      display: none;
-
-      @include bp(lg) {
-        display: block;
-      }
-    }
-
     .description {
       font-size: 15px;
       flex-direction: column;
       margin: 20px 0;
 
       @include bp(lg) {
+        border-left: 1px solid $white;
         display: flex;
-        margin: 0;
+        margin: 0 0 0 10px;
+        padding: 0 0 0 16px;
       }
 
       p {
-        margin: 0;
+        font-weight: 600;
+        margin: 0 0 15px;
       }
 
       a {
-        color: $black;
+        color: #0e1516;
         cursor: pointer;
         position: relative;
         text-decoration: none;
@@ -81,7 +73,7 @@
             left: 50%;
             position: absolute;
             width: 0;
-            background: $black;
+            background: #0e1516;
             transition: all 0.2s ease 0s;
           }
         }
@@ -115,8 +107,15 @@
     right: 47%;
     width: 150px;
 
+    @include bp(md) {
+      right: 25%;
+      top: 20%;
+    }
+
     @include bp(lg) {
       opacity: 1;
+      right: 47%;
+      // top: 0%;
     }
 
     .spoke {

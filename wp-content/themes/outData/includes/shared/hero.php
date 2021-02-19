@@ -31,14 +31,6 @@ $img = get_field('hero_image');
 					
 					<div class="animated-icons">
 					<div class="animated-icons-wrapper">
-						<!-- <a href="" class="">
-							<div>
-								<span></span><span></span><span></span><span></span>
-								<span class="icon is-large fas fa-3x">
-									<i class="fab fa-linkedin-in"></i>
-								</span>
-							</div>
-						</a> -->
 						<a href="https://github.com/theoutdata" class="orange-shadow">
 							<div>
 								<span></span><span></span><span></span><span></span>
@@ -55,19 +47,11 @@ $img = get_field('hero_image');
 								</span>
 							</div>
 						</a>
-						<!-- <a href="" class="orange-background">
-							<div>
-								<span></span><span></span><span></span><span></span>
-								<span class="icon is-large fas fa-3x">
-									<i class="fab fa-kaggle"></i>
-								</span>
-							</div>
-						</a> -->
 					</div>
 						<div class="vl"></div>
 						<div class="description">
 							<p class="ctrl-white"><?php the_field('hero_description'); ?></p>
-							<a href="/article" class="started">Getting started <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
+							<span><a href="/article" class="started">Getting started <span class="icon "><i class="fas fa-arrow-right"></i></span></a></span>
 						</div>
 					</div>
 				</div>
