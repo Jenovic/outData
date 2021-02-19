@@ -18,7 +18,9 @@
 			<?php $post_count = 1; if ( $q->have_posts() ) : while ( $q->have_posts() ) : $q->the_post(); ?>
 				<?php if ( $post_count <= 1 ) : ?>
 					<div class="col is-12 is-8-md is-8-lg">
-						<?php get_template_part('includes/shared/featured-post-tile'); ?>
+						<div class="featured-large">
+							<?php get_template_part('includes/shared/featured-post-tile'); ?>
+						</div>
 					</div>
 					<div class="featured-small">
 				<?php else: ?>

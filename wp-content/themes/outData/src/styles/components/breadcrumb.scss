@@ -38,8 +38,28 @@
   }
 }
 
-.article-single-hero {
+.article-single-hero,
+.article-cat-hero {
   #breadcrumbs {
     padding: 40px 0 0;
+  }
+}
+
+.mode-dark {
+  .article-single-hero,
+  .article-cat-hero {
+    #breadcrumbs {
+      padding: 40px 0 0;
+
+      a {
+        color: $white;
+      }
+
+      span {
+        &.breadcrumb_last {
+          color: $grey;
+        }
+      }
+    }
   }
 }
