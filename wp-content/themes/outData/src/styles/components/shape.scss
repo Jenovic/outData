@@ -25,3 +25,13 @@
     z-index: 0;
   }
 }
+
+.mode-dark {
+  .custom-shape-wrap {
+    svg {
+      #shape-p {
+        fill: $body-dark !important;
+      }
+    }
+  }
+}
