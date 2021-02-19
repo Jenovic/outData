@@ -98,11 +98,18 @@ blockquote {
 }
 
 .code {
-  color: $dark;
   background-color: #e4e4e4;
+  color: $dark;
   padding: 30px;
 
   p {
     margin: 0;
+  }
+}
+
+.mode-dark {
+  .code {
+    background-color: $header-black;
+    color: $white;
   }
 }

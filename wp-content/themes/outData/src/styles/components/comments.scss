@@ -214,3 +214,56 @@
     }
   }
 }
+
+.comment-form {
+  .form-submit {
+    #comment-submit {
+      border: 0;
+      color: white !important;
+      background: $light-green !important;
+      border-radius: 0 !important;
+      font-family: $font-primary !important;
+      padding: 10px 10px !important;
+      text-transform: uppercase !important;
+
+      &:hover {
+        background: darken($light-green, 20%) !important;
+      }
+    }
+  }
+}
+
+.mode-dark {
+  #comments {
+    &.comments-area {
+      h2 {
+        color: $blue;
+      }
+    }
+
+    .comment-list {
+      li {
+        &.depth-1 {
+          border-bottom: 1px solid rgba(224, 222, 222, 0.31);
+        }
+      }
+
+      cite {
+        color: $blue !important;
+        a {
+          color: $blue !important;
+        }
+      }
+    }
+
+    .comment-meta {
+      a {
+        color: $grey !important;
+      }
+    }
+
+    p {
+      color: $white !important;
+    }
+  }
+}

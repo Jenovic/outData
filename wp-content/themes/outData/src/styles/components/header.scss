@@ -1,6 +1,6 @@
 .header {
   background-color: $white;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid rgba(0, 92, 151, 0.31);
   left: 0;
   position: fixed;
   transition-duration: 0.25s;
@@ -12,7 +12,6 @@
 
   &.scrolled {
     background-color: $white;
-    border: 0;
 
     @include bp(lg) {
       padding: 0;

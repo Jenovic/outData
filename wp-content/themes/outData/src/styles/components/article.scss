@@ -153,6 +153,35 @@
   }
 }
 
+.mode-dark {
+  .article-single-hero {
+    &__title {
+      color: $blue;
+    }
+
+    &__post_meta {
+      &-content {
+        color: $white;
+
+        .time,
+        .icon {
+          color: $grey;
+        }
+      }
+    }
+
+    &__post_socials {
+      span {
+        color: $white;
+      }
+
+      .icon {
+        color: $light-green;
+      }
+    }
+  }
+}
+
 .article-single-content {
   h1 {
     color: $navy-blue;
@@ -189,6 +218,19 @@
 
   a {
     color: $light-green;
+  }
+}
+
+.mode-dark {
+  .article-single-content {
+    h1 {
+      color: $blue;
+    }
+
+    p,
+    ul {
+      color: $white;
+    }
   }
 }
 
@@ -236,6 +278,24 @@
 
         @include bp(md) {
           font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+.mode-dark {
+  .article-single__post-body {
+    .tags {
+      .icon {
+        color: $blue;
+      }
+    }
+
+    .related_posts {
+      &-title {
+        span {
+          color: $blue;
         }
       }
     }
