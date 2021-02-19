@@ -714,6 +714,44 @@
       }
     }
   }
+
+  &__mode {
+    margin: 0 0 0 20px;
+    position: relative;
+    z-index: 9999;
+
+    &_dark,
+    &_light {
+      cursor: pointer;
+      display: block;
+      height: 22px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      width: 38px;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &_dark {
+      background: url('../../src/assets/mode_dark.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: -30px;
+      top: -12px;
+    }
+
+    &_light {
+      background: url('../../src/assets/mode_light.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: -30px;
+      top: -12px;
+    }
+  }
 }
 
 .oldschool {

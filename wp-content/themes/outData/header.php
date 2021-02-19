@@ -51,6 +51,11 @@
 				<div class="header__search__toggle js-search-toggle">&nbsp;</div>
 			</div>
 
+			<div class="header__mode">
+				<a class="header__mode_dark"></a>
+				<a class="header__mode_light active"></a>
+			</div>
+
 			<div class="header__toggle">
 				<button id="mobile-toggle" role="button" aria-label="Toggle Navigation" class="hamburger hamburger--collapse js-hamburger">
 					<span class="hamburger-box">
