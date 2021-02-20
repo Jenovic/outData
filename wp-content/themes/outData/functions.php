@@ -22,6 +22,25 @@ class theme
 			'footer_legal' => 'Footer Legal Navigation',
 		) );
 
+		// Add Advanced Custom Fields Options Page
+		if ( function_exists( 'acf_add_options_page' ) )
+		{
+			$option_page = acf_add_options_page( array(
+				'page_title' => 'Theme General Settings',
+				'menu_title' => 'Website Options',
+				'menu_slug'  => 'website-settings',
+				'capability' => 'edit_posts',
+				'redirect'   => false,
+			) );
+
+			// Sub page for article to set content for the archive
+			acf_add_options_sub_page(array(
+				'page_title' => 'Article Archive Content',
+				'menu_title' => 'Article Archive Content',
+				'parent_slug' => 'edit.php?post_type=article'
+			));
+		}
+
 		// Enqueue JS and CSS
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 

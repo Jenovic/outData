@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // toggle between dark and light modes
   function toggleMode() {
     var modeLight = document.querySelector('.header__mode_light');
     var modeDark = document.querySelector('.header__mode_dark');
@@ -202,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.querySelector('.header__mode_light.active')) {
       modeLight.classList.add('active');
       body.classList.add('mode-light');
+      localStorage.removeItem('mode');
     } else {
       modeLight.classList.remove('active');
       body.classList.remove('mode-light');
@@ -210,21 +212,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.querySelector('.header__mode_dark.active')) {
       modeDark.classList.add('active');
       body.classList.add('mode-dark');
+      localStorage.setItem('mode', 'dark');
     } else {
       modeDark.classList.remove('active');
       body.classList.remove('mode-dark');
     }
   }
 
+  // when light mode button is clicked
   if (document.querySelector('.header__mode_light')) {
     document
       .querySelector('.header__mode_light')
       .addEventListener('click', toggleMode, false);
   }
 
+  // when dark mode button is clicked
   if (document.querySelector('.header__mode_dark')) {
     document
       .querySelector('.header__mode_dark')
       .addEventListener('click', toggleMode, false);
   }
+
+  // check if user selected dark mode on page load
+  window.addEventListener('load', function() {
+    var mode = localStorage.getItem('mode');
+
+    if (mode === 'dark') {
+      document.querySelector('body').classList.add('mode-dark');
+      document.querySelector('.header__mode_dark').classList.add('active');
+      document
+        .querySelector('.header__mode_light.active')
+        .classList.remove('active');
+    }
+  });
 });

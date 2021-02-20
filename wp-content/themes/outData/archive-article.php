@@ -3,15 +3,16 @@
 <section class="hero-article">
 	<div class="container">
 			<div class="cols hero-article__content">
-					<div class="col is-12 is-6-md is-6-lg load-hidden">
+					<div class="col is-12 is-6-md is-7-lg load-hidden">
 					<?php
 						if ( function_exists('yoast_breadcrumb') ) {
 							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 						}
 					?>
-						<h1>Find here what you're looking for here.</h1>
+						<h1>Find here what is relevant to you.</h1>
+						<p>From simple concepts definitions to complex models descriptions, we've got you covered.</p>
 					</div>
-					<div class="col is-12 is-6-md is-6-lg flex align-right position-bottom load-hidden">
+					<div class="col is-12 is-6-md is-5-lg flex align-right position-bottom load-hidden">
 						<?php get_template_part('includes/svgs/article'); ?>
 					</div>
 					<div class="col is-12 load-hidden">
