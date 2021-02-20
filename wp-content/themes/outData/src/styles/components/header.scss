@@ -343,7 +343,11 @@
 
         &.current-menu-item {
           a {
-            color: $dark-blue;
+            color: $white;
+
+            @include bp(lg) {
+              color: $dark-blue;
+            }
           }
         }
       }
@@ -1011,7 +1015,11 @@ $hamburger-hover-filter: opacity(50%) !default;
 
       .current-menu-item {
         a {
-          color: $blue;
+          color: $white;
+
+          @include bp(lg) {
+            color: $blue;
+          }
         }
       }
     }
