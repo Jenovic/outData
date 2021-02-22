@@ -2,6 +2,7 @@
   font-family: 'Kollektif';
   src: url('../../src/Fonts/Kollektif.woff') format('woff');
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -9,4 +10,5 @@
   src: url('../../src/Fonts/Kollektif-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
