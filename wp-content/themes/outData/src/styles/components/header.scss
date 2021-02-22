@@ -171,7 +171,6 @@
   }
 
   &__nav {
-    align-items: center;
     -webkit-overflow-scrolling: touch;
     background-color: $black;
     box-sizing: border-box;
@@ -189,6 +188,10 @@
     transition: opacity 0.25s ease-in-out;
     width: 100%;
     z-index: 9998;
+
+    @include bp(md) {
+      align-items: center;
+    }
 
     @include bp(lg) {
       background-color: transparent;
