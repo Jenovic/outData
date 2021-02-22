@@ -1,7 +1,7 @@
 {
   "name": "your-theme-name",
   "version": "1.0.0",
-  "description": "Custom Wordpress Theme built by Forge",
+  "description": "Custom Wordpress Theme built by Jenovic Lumu",
   "main": "index.php",
   "scripts": {
     "build": "gulp styles && gulp scripts && gulp assets",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "Forge",
+  "author": "Jenovic Lumu",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
