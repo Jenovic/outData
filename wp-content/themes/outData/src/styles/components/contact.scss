@@ -62,9 +62,15 @@
   }
 
   p,
-  ul {
+  ul,
+  li,
+  span {
     color: $dark;
     font-size: 19px;
+  }
+
+  a {
+    color: $light-green;
   }
 
   .container {

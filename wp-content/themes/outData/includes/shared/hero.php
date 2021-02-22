@@ -31,7 +31,7 @@ $img = get_field('hero_image');
 					
 					<div class="animated-icons">
 					<div class="animated-icons-wrapper">
-						<a href="https://github.com/theoutdata" class="orange-shadow">
+						<a href="https://github.com/theoutdata" class="orange-shadow" target="blank">
 							<div>
 								<span></span><span></span><span></span><span></span>
 								<span class="icon is-large fas fa-3x">
@@ -39,7 +39,7 @@ $img = get_field('hero_image');
 								</span>
 							</div>
 						</a>
-						<a href="https://twitter.com/outdata8" class="orange-border">
+						<a href="https://twitter.com/outdata8" class="orange-border" target="blank">
 							<div>
 								<span></span><span></span><span></span><span></span>
 								<span class="icon is-large fas fa-3x">
