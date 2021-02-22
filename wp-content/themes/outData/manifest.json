@@ -1,0 +1,9 @@
+{
+  "name": "outdata",
+  "short_name": "outdata",
+  "theme_color": "#1b5c90",
+  "background_color": "#2196f3",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "theoutdata.com"
+}
