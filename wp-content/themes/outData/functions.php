@@ -104,7 +104,7 @@ class theme
 		wp_enqueue_script('themejs', get_template_directory_uri() . '/dist/scripts/scripts.js', array('jquery'), $js_cache_buster, true );
 		wp_enqueue_style('themecss', get_template_directory_uri() . '/dist/styles/style.css', array(), $css_cache_buster);
 
-		if (is_front_page() && is_home()) {
+		if (is_front_page()) {
 			wp_enqueue_script('typejs', 'https://cdn.jsdelivr.net/npm/typed.js@2.0.9', array('jquery'), false);
 		}
 	}
