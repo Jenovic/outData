@@ -2,8 +2,15 @@
   margin: 40px 0;
 
   .cols {
-    padding: 0 20px;
+    // padding: 0 20px;
     // box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  }
+
+  &-wrapper {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    // box-shadow: 0 2px 4px rgba($black-hex, 0.13);
+    margin: 10px 0;
+    display: flex;
   }
 
   &-image,
@@ -11,12 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
 
     img {
       width: 100%;
 
       @include bp(lg) {
-        width: 80%;
+        width: 60%;
       }
     }
   }
@@ -30,6 +38,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
+    padding: 0 20px;
 
     h1 {
       text-align: center;
@@ -47,6 +57,11 @@
 
       @include bp(md) {
         padding: 0;
+      }
+
+      .button {
+        padding: 14px 20px;
+        font-size: 15px;
       }
     }
   }
