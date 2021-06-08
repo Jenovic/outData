@@ -14,7 +14,7 @@
 							<a class="button button--blue" href="/contact-us">Contact us</a>
 
 							<ul class="menu">
-								<li class="menu-item">info.outdata@gmail.com</li>
+								<li class="menu-item"><a href="mailto:info.outdata@gmail.com">info.outdata@gmail.com</a></li>
 								<!-- <li class="menu-item">0123456789</li> -->
 							</ul>
             </div>
