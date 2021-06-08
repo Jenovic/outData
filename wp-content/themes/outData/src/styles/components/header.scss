@@ -1,6 +1,4 @@
 .header {
-  // background-color: $white;
-  // border-bottom: 1px solid rgba(0, 92, 151, 0.31);
   left: 0;
   position: fixed;
   transition-duration: 0.25s;
@@ -23,6 +21,7 @@
       li {
         > a {
           letter-spacing: 0;
+          color: $dark-blue;
         }
 
         @include bp(lg) {
@@ -51,16 +50,6 @@
     [class*='__actions'] {
       padding: 0;
     }
-
-    [class*='__toggle'] {
-      top: 30px;
-      @include bp(md) {
-        top: 30px;
-      }
-      @include bp(lg) {
-        top: 24px;
-      }
-    }
   }
 
   .container {
@@ -79,7 +68,9 @@
   }
 
   &__logo {
-    transition: background 0.25s ease-in-out;
+    position: absolute !important;
+    top: -3px;
+    transition: all 0.25s ease-in-out;
   }
 
   &__actions {
@@ -106,7 +97,7 @@
       display: block;
       margin-left: 25px;
       opacity: 1;
-      padding: 10px 0;
+      padding: 0;
       pointer-events: all;
       position: static;
       transform: translateX(0%);
@@ -116,6 +107,7 @@
     .button {
       margin: 0.5em 0;
       background-color: $light-green;
+      padding: 14px 20px;
 
       @include bp(lg) {
         background-color: $blue;
@@ -217,7 +209,6 @@
     .menu {
       margin-left: auto;
       margin-right: auto;
-      // max-width: 500px;
 
       // scss-lint:disable NestingDepth, SelectorDepth
       > li {
@@ -341,7 +332,6 @@
           text-transform: uppercase;
 
           @include bp(lg) {
-            color: $dark-blue;
             padding: 15px 0;
             transition-duration: 0.25s;
             transition-property: color, padding;
@@ -356,10 +346,6 @@
         &.current-menu-item {
           a {
             color: $white;
-
-            @include bp(lg) {
-              color: $dark-blue;
-            }
           }
         }
       }
@@ -539,8 +525,6 @@
         @include bp(lg) {
           > a {
             color: $blue-hover;
-
-            // white-space: nowrap;
           }
 
           .sub-menu {
@@ -665,15 +649,15 @@
       border-radius: 0;
 
       &:hover {
-        background-color: $white;
+        background-color: transparent;
       }
     }
 
     input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
-      background-color: $off-white;
-      border: 1px solid $white;
+      background-color: transparent;
+      border: 1px solid transparent;
       color: $dark-blue;
-      height: 45px;
+      height: 40px;
       margin-right: 10px;
       padding: 0 10px;
       transition-duration: 0.25s;
@@ -1012,9 +996,18 @@ $hamburger-hover-filter: opacity(50%) !default;
     background-color: $header-black;
     border-bottom: 1px solid rgba(155, 155, 155, 0.18);
 
+    &.scrolled {
+      [class*='__logo'] {
+        background: url('../../src/assets/logo-white.svg');
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
     &__logo {
       @include cfix;
-      background: url('../../src/assets/logo-dark.png');
+      background: url('../../src/assets/logo-white.svg');
       background-position: center right;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1022,12 +1015,12 @@ $hamburger-hover-filter: opacity(50%) !default;
 
     &__nav {
       a {
-        color: $white;
+        color: $white !important;
       }
 
       .current-menu-item {
         a {
-          color: $white;
+          color: $white !important;
 
           @include bp(lg) {
             color: $blue;

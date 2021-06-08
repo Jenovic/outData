@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
       search.classList.remove('open');
     } else {
       search.classList.add('open');
+      document.querySelector('.js-search input').style.backgroundColor =
+        '#f5f5f5';
     }
   }
 
