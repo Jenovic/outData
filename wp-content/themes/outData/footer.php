@@ -21,7 +21,7 @@
             <div class="col is-12 footer__legal">
                 <div class="footer__legal__pages">
                     <ul class="menu menu__legal">
-                        <li>&copy; outdata <?php echo date('Y'); ?></li>
+                        <li>&copy; OUTDATA <?php echo date('Y'); ?></li>
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer_legal',

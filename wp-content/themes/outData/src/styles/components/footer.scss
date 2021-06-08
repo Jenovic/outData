@@ -105,19 +105,22 @@
     list-style: none;
 
     li {
+      font-size: 12px;
       padding: 0;
       margin: 0;
+      text-transform: uppercase;
 
       a {
         display: block;
         color: $white;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: 0;
         line-height: 24px;
         font-weight: 600;
         margin-bottom: 0.5em;
         font-weight: 600;
+        text-transform: uppercase;
 
         &:hover {
           text-decoration: underline;
@@ -131,7 +134,7 @@
 
         a {
           color: $grey;
-          font-size: 14px;
+          font-size: 12px;
           display: inline;
         }
 
