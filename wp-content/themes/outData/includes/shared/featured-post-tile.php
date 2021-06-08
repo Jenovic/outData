@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="featured-tile-article load-hidden">
+<a href="<?php the_permalink(); ?>" class="featured-tile-article">
 	<?php if (has_post_thumbnail()) : ?>
 		<div class="tile-article__image" style="background: url(<?php the_post_thumbnail_url('archive-thumbnail'); ?>);"></div>
 	<?php endif; ?>

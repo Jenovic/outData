@@ -1,7 +1,8 @@
 .tile-article,
 .featured-tile-article {
-  background-color: $white;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  background-color: $off-white;
+  // box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  border-bottom: 3px solid lighten($navy-blue, 80%);
   color: $navy-blue;
   display: flex;
   flex-direction: column;
@@ -56,7 +57,7 @@
   }
 
   &:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
 
     .tile-article__content {
       background-color: lighten($navy-blue, 80%);
@@ -96,6 +97,10 @@
     h3 {
       height: 170px;
     }
+  }
+
+  &:hover {
+    transform: translateY(-5px) !important;
   }
 }
 
