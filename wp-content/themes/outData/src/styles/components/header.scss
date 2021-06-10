@@ -21,7 +21,9 @@
       li {
         > a {
           letter-spacing: 0;
-          color: $dark-blue;
+          @include bp(lg) {
+            color: $dark-blue;
+          }
         }
 
         @include bp(lg) {
@@ -991,12 +993,35 @@ $hamburger-hover-filter: opacity(50%) !default;
   }
 }
 
+.single-article,
+.tax-article_cat {
+  .header {
+    &__logo {
+      @include cfix;
+      background: url('../../src/assets/logo-dark.svg');
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    a:not(.button) {
+      color: $white;
+
+      @include bp(lg) {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
 .mode-dark {
   .header {
-    background-color: $header-black;
-    border-bottom: 1px solid rgba(155, 155, 155, 0.18);
+    transition: all 0.25s ease-in-out;
 
     &.scrolled {
+      background-color: $header-black;
+      border-bottom: 1px solid rgba(155, 155, 155, 0.18);
+
       [class*='__logo'] {
         background: url('../../src/assets/logo-white.svg');
         background-position: center right;
@@ -1039,13 +1064,13 @@ $hamburger-hover-filter: opacity(50%) !default;
         width: 20px;
 
         &:hover {
-          background-color: $header-black;
+          background-color: transparent;
         }
       }
 
       input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
         @include bp(lg) {
-          border: 1px solid $header-black;
+          border: 1px solid transparent;
         }
       }
     }

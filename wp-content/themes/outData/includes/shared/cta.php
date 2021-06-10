@@ -12,6 +12,11 @@ $img_dark = get_field('cta_image_dark_mode');
 						<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 					<?php endif; ?>
 				</div>
+				<div class="cta-image-dark">
+					<?php if ($img_dark) : ?>
+						<img src="<?php echo $img_dark['url']; ?>" alt="<?php echo $img_dark['alt']; ?>">
+					<?php endif; ?>
+				</div>
 
 				<div class="cta-content">
 					<h1><?php the_field('cta_title'); ?></h1>
@@ -24,11 +29,6 @@ $img_dark = get_field('cta_image_dark_mode');
 				</div>
 			</div>
 
-				<!-- <div class="cta-image-dark">
-					<?php if ($img_dark) : ?>
-						<img src="<?php echo $img_dark['url']; ?>" alt="<?php echo $img_dark['alt']; ?>">
-					<?php endif; ?>
-				</div> -->
 			</div>
 			<!-- <div class="col is-12 is-6-md flex bg-white">
 				<div class="cta-content">

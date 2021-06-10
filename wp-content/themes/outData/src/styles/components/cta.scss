@@ -69,7 +69,7 @@
 
 .mode-dark {
   .cta {
-    .col {
+    &-wrapper {
       background-color: $header-black;
     }
 
