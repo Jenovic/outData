@@ -54,9 +54,9 @@
     }
 
     .menu {
-      @include bp(custom, max, $bp-lg) {
-        display: none;
-      }
+      position: absolute;
+      top: 65px;
+      right: 20px;
     }
 
     li {

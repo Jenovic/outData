@@ -3,8 +3,8 @@
 <section class="article-single">
 	<div class="container">
 		<div class="cols">
-			<div class="col is-12 is-8-md load-hidden">
-				<div class="article-single-hero">
+			<div class="col is-12 is-8-md">
+				<div class="article-single-hero load-hidden">
 					<?php
 						if ( function_exists('yoast_breadcrumb') ) {
 							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
@@ -37,10 +37,10 @@
 					</div>
 					<div class="article-single-hero__image" style="background: url(<?php the_post_thumbnail_url('archive-thumbnail'); ?>);"></div>
 				</div>
-				<div class="article-single-content">
+				<div class="article-single-content load-hidden">
 					<?php the_content(); ?>
 				</div>
-				<div class="article-single__post-body">
+				<div class="article-single__post-body load-hidden">
 					<div class="socials flex align-right">
 						<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="blank"><span class="icon "><i class="fab fa-facebook fa-lg"></i></span></a>
 						<a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article%20on%20outdata.com%20-%20<?php the_permalink(); ?>" class="twitter-share-button" target="blank"><span class="icon "><i class="fab fa-twitter fa-lg"></i></span></a>
@@ -58,9 +58,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col is-12 is-1-md"></div>
-			<div class="col is-12 is-3-md">
-				<div class="article-single__related-posts">
+			<!-- <div class="col is-12 is-12-md"></div> -->
+			<div class="col is-12 is-4-md">
+				<div class="article-single__related-posts load-hidden">
 						<h3>Related Posts</h3>
 						<?php 
 							$current_cat = (get_the_category()) ? get_the_category() : false;

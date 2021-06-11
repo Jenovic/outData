@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="cols">
 					<div class="col is-12 load-hidden">
-							<h1 class="no-margin"><?php _e( "Results for &#39;" . $s ."&#39;", 'outdata' ) ?></h1>
+							<h1 class="no-margin"><?php _e( "Search results", 'outdata' ) ?></h1>
 							<form action="/" method="get" id="search" class="search" autocomplete="off">
 								<input name="s" placeholder="Search..." value="<?php echo get_search_query() ?>" autocomplete="off">
 								<button type="submit"><span class="icon-search"></span></button>

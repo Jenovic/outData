@@ -10,7 +10,7 @@
                 ));
                 ?>
 						</div>
-						<div class="col is-12 is-6-lg footer__support-column">
+						<div class="col is-12 is-6-md is-6-lg footer__support-column">
 							<a class="button button--blue" href="/contact-us">Contact us</a>
 
 							<ul class="menu">

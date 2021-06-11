@@ -99,6 +99,7 @@ blockquote {
 
 .code {
   background-color: #e4e4e4;
+  border-bottom: 3px solid lighten($navy-blue, 80%);
   color: $dark;
   padding: 30px;
 

@@ -79,6 +79,17 @@
   }
 }
 
+.article-single__related-posts {
+  .tile-article {
+    &.small {
+      h3 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
 .featured-tile-article {
   flex-direction: row;
 
@@ -118,6 +129,16 @@
     &:hover {
       .tile-article__content {
         background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .article-single__related-posts {
+    .tile-article {
+      &.small {
+        h3 {
+          color: $white;
+        }
       }
     }
   }

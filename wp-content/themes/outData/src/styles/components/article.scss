@@ -88,13 +88,21 @@
 .article-single {
   padding: 50px 0 20px;
 
+  @include bp(md) {
+    padding: 50px 0;
+  }
+
   &-hero {
     &__title {
       color: $navy-blue;
-      font-size: 30px;
+      font-size: 20px;
       margin: 50px 0 30px;
 
       @include bp(md) {
+        font-size: 30px;
+      }
+
+      @include bp(lg) {
         font-size: 40px;
       }
     }
@@ -151,10 +159,14 @@
   &-content {
     h1 {
       color: $navy-blue;
-      font-size: 30px;
+      font-size: 20px;
       margin: 20px 0;
 
       @include bp(md) {
+        font-size: 30px;
+      }
+
+      @include bp(lg) {
         font-size: 40px;
       }
     }
@@ -179,7 +191,15 @@
     p,
     ul {
       color: $dark;
-      font-size: 19px;
+      font-size: 14px;
+
+      @include bp(md) {
+        font-size: 16px;
+      }
+
+      @include bp(lg) {
+        font-size: 19px;
+      }
     }
 
     a {
@@ -215,12 +235,11 @@
   }
 
   &__related-posts {
-    padding: 70px 0 0;
-    // padding: 20px 0 50px;
+    padding: 30px 0;
 
-    // @include bp(md) {
-    //   padding: 50px 0 0;
-    // }
+    @include bp(md) {
+      padding: 70px 0 0;
+    }
 
     h3 {
       color: $navy-blue;

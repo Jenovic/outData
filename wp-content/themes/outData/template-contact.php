@@ -33,14 +33,22 @@ $img = get_field('contact_hero_image');
 <section class="content-contact">
 	<div class="container">
 		<div class="cols content-contact__wrapper">
-			<div class="col is-12 is-8-md is-8-lg load-hidden">
+			<div class="col is-12 is-7-md is-8-lg load-hidden">
 				<?php the_content(); ?>
 			</div>
-			<div class="col is-12 is-4-md is-4-lg load-hidden">
+			<div class="col is-12 is-5-md is-4-lg load-hidden">
 				<div class="image_wrapper">
 					<?php if ($img) : ?>
 						<img class="load-hidden" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 					<?php endif; ?>
+				</div>
+				<div class="contact-details">
+					<ul>
+						<li><span>Contact details:</span></li>
+						<li><a href="mailto:info.outdata@gmail.com">info.outdata@gmail.com</a></li>
+						<li><a href="https://github.com/theoutdata">https://github.com/theoutdata</a></li>
+						<li><a href="https://twitter.com/outdata8">https://twitter.com/outdata8</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

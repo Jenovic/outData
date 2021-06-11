@@ -105,6 +105,28 @@
     }
   }
 
+  .contact-details {
+    margin: 50px 25px 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        padding: 0 0 10px;
+
+        span {
+          font-weight: 600;
+        }
+
+        a {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column-reverse;
