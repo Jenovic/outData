@@ -20,7 +20,9 @@
 							?>
 							<div class="article-single-hero__post_meta-content">
 								<div class="author">
-									<span class="name"><?php the_author(); ?></span>
+									<span class="name"><?php echo get_the_author_meta('first_name', $get_author_id); ?></span>
+									<span class="name"><?php echo ' '; ?></span>
+									<span class="name"><?php echo get_the_author_meta('last_name', $get_author_id); ?></span>
 								</div>
 								<span class="icon"><i class="fas fa-clock"></i></span>
 								<span class="time"><?php echo theme::meks_time_ago(); ?></span>
