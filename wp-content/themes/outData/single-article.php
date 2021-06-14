@@ -63,7 +63,7 @@
 			<!-- <div class="col is-12 is-12-md"></div> -->
 			<div class="col is-12 is-4-md">
 				<div class="article-single__related-posts load-hidden">
-						<h3>Related Posts</h3>
+						<h3>Related Articles</h3>
 						<?php 
 							$current_cat = (get_the_category()) ? get_the_category() : false;
 							$related = get_posts( array(
@@ -78,6 +78,10 @@
 								<?php foreach( $related as $post ) : setup_postdata($post); ?>
 										<?php get_template_part('includes/shared/post-tile-small'); ?>
 								<?php endforeach; wp_reset_postdata(); ?>
+							</div>
+						<?php else: ?>
+							<div class="posts">
+								<p>No article found...</p>
 							</div>
 						<?php endif; ?>
 					</div>
