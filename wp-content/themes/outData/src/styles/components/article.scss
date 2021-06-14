@@ -154,6 +154,17 @@
       justify-content: space-between;
       padding: 0 0 50px;
     }
+
+    .hero_image_creds {
+      color: $dark-grey;
+      font-style: italic;
+      font-size: 14px;
+      margin-top: -10px;
+
+      a {
+        color: $dark-grey;
+      }
+    }
   }
 
   &-content {

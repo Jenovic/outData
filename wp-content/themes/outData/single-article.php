@@ -38,6 +38,7 @@
 						</div>
 					</div>
 					<div class="article-single-hero__image" style="background: url(<?php the_post_thumbnail_url('archive-thumbnail'); ?>);"></div>
+					<div class="hero_image_creds"><?php echo get_field("image_author_credit"); ?></div>
 				</div>
 				<div class="article-single-content load-hidden">
 					<?php the_content(); ?>
