@@ -101,6 +101,7 @@ class theme
 		$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/dist/scripts/scripts.js' ) );
 		$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/dist/styles/style.css' ) );
 
+		wp_enqueue_script('jQuery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), '1.0', true);
 		wp_enqueue_script('themejs', get_template_directory_uri() . '/dist/scripts/scripts.js', array('jquery'), $js_cache_buster, true );
 		wp_enqueue_style('themecss', get_template_directory_uri() . '/dist/styles/style.css', array(), $css_cache_buster);
 

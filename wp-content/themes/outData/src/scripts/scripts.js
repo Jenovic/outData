@@ -103,6 +103,23 @@ document.addEventListener('DOMContentLoaded', () => {
       .addEventListener('click', toggleSearchState, false);
   }
 
+  function handleScrollAnimation() {
+    $(document).on('click', 'a[href^="#"]', function(event) {
+      event.preventDefault();
+
+      scrollTo($($.attr(this, 'href')).offset().top);
+    });
+  }
+
+  function scrollTo(scrollTopEl) {
+    $('html, body').animate(
+      {
+        scrollTop: scrollTopEl,
+      },
+      500,
+    );
+  }
+
   /**
    * scrollEvents()
    *
@@ -121,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.load-hidden');
 
     scrollEvents();
+    handleScrollAnimation();
   }
   onFirstPaint();
 
