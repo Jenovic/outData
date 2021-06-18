@@ -5,9 +5,13 @@
 body,
 html {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
   position: relative;
   background: $white;
+
+  &.home {
+    overflow-x: hidden !important;
+  }
 
   &.mode-dark {
     color: $body-dark;

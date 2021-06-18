@@ -92,6 +92,10 @@
     padding: 50px 0;
   }
 
+  .container {
+    overflow: visible;
+  }
+
   &-hero {
     &__title {
       color: $navy-blue;
@@ -199,10 +203,15 @@
       font-size: 25px;
     }
 
+    h4 {
+      font-size: 20px;
+    }
+
     p,
     ul {
       color: $dark;
       font-size: 14px;
+      line-height: 32px;
 
       @include bp(md) {
         font-size: 16px;
@@ -214,7 +223,21 @@
     }
 
     a {
-      color: $light-green;
+      color: $blue;
+    }
+
+    blockquote {
+      color: $dark;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: '\201C''\201D''\2018''\2019';
+
+      border-left: 10px solid $blue;
+      background: lighten($navy-blue, 80%);
+
+      p {
+        display: inline;
+      }
     }
   }
 
@@ -250,6 +273,8 @@
 
     @include bp(md) {
       padding: 70px 0 0;
+      position: sticky;
+      top: 20px;
     }
 
     h3 {
