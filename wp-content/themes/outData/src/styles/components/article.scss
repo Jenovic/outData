@@ -356,6 +356,12 @@
       ul {
         color: $white;
       }
+
+      blockquote {
+        p {
+          color: $dark !important;
+        }
+      }
     }
 
     &__post-body {
@@ -376,6 +382,16 @@
   .article-cat-hero {
     h2 {
       color: $blue;
+    }
+  }
+}
+
+.logged-in {
+  .article-single {
+    &__related-posts {
+      @include bp(md) {
+        top: 40px;
+      }
     }
   }
 }
