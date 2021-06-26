@@ -1003,7 +1003,9 @@ $hamburger-hover-filter: opacity(50%) !default;
 }
 
 .single-article,
-.tax-article_cat {
+.tax-article_cat,
+.search-results,
+.search-no-results {
   .header {
     &__logo {
       @include cfix;

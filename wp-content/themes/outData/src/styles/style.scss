@@ -5,12 +5,12 @@
 body,
 html {
   max-width: 100%;
-  overflow: visible;
+  overflow-x: hidden;
   position: relative;
   background: $white;
 
-  &.home {
-    overflow-x: hidden !important;
+  &.article-template-default {
+    overflow: visible !important;
   }
 
   &.mode-dark {

@@ -136,3 +136,21 @@
     }
   }
 }
+
+.mode-dark {
+  .content-contact {
+    .contact-details {
+      ul {
+        li {
+          span {
+            color: $white;
+          }
+
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
