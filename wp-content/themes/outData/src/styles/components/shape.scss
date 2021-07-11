@@ -26,6 +26,16 @@
   }
 }
 
+.hero-article {
+  .custom-shape-wrap {
+    display: none;
+
+    @include bp(sm) {
+      display: block;
+    }
+  }
+}
+
 .mode-dark {
   .custom-shape-wrap {
     svg {
