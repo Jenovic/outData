@@ -23,6 +23,22 @@
   .featured-small {
     flex: 1;
   }
+
+  .mobile-only {
+    display: block;
+
+    @include bp(sm) {
+      display: none;
+    }
+  }
+
+  .desktop-only {
+    display: none;
+
+    @include bp(sm) {
+      display: block;
+    }
+  }
 }
 
 .mode-dark {
