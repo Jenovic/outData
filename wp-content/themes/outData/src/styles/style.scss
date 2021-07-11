@@ -16,5 +16,11 @@ html {
   &.mode-dark {
     color: $body-dark;
     background: $body-dark;
+
+    &.privacy-policy {
+      p {
+        color: $white;
+      }
+    }
   }
 }
