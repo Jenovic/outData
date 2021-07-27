@@ -75,6 +75,22 @@
       h3 {
         height: 45px;
       }
+
+      @include bp(md) {
+        height: auto;
+
+        h3 {
+          height: auto;
+        }
+      }
+
+      @include bp(lg) {
+        height: 104px;
+
+        h3 {
+          height: 45px;
+        }
+      }
     }
   }
 }

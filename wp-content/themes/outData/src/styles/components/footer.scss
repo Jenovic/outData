@@ -129,6 +129,12 @@
     }
 
     &__legal {
+      padding: 0 0 15px;
+
+      @include bp(md) {
+        padding: 0;
+      }
+
       li {
         display: inline-block;
 
