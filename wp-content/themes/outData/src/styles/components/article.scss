@@ -1,5 +1,5 @@
 .hero-article {
-  background-color: $dark-purple;
+  background-color: $sombre-blue;
   padding: 60px 0 30px;
   position: relative;
 
@@ -53,7 +53,11 @@
   transition: all 0.2s ease-in-out;
 
   .cols {
-    padding-bottom: 30px;
+    padding: 60px;
+  }
+
+  .cols:nth-child(even) {
+    background-color: #f0f4f5;
   }
 
   .cat-meta {
@@ -68,18 +72,17 @@
     h4 {
       font-size: 16px;
       margin: 0;
-    }
-
-    .link {
-      color: $navy-blue;
-      a {
-        color: $navy-blue;
-        margin-right: 5px;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      text-transform: uppercase;
+      
+      &::after {
+        background-color: $light-green;
+        content: '';
+        height: 5px;
+        width: 20px;
+        margin-top: 5px;
+        margin-bottom: 1rem;
+        display: block;
+        position: relative;
       }
     }
   }
@@ -303,19 +306,39 @@
 
 .article-cat-hero {
   padding: 50px 0 0;
+}
 
+.article-cat-content {
   h2 {
     color: $navy-blue;
+    font-size: 24px;
     margin: 20px 0;
+    text-transform: uppercase;
 
     @include bp(md) {
       margin: 0;
+    }
+
+    &::after {
+      background-color: $light-green;
+      content: '';
+      height: 5px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: 1rem;
+      display: block;
+      position: relative;
     }
   }
 }
 
 .mode-dark {
   .archive-article {
+
+    .cols:nth-child(even) {
+      background-color: $body-dark;
+    }
+
     .cat-meta {
       h4,
       a,
@@ -385,7 +408,7 @@
     }
   }
 
-  .article-cat-hero {
+  .article-cat-content {
     h2 {
       color: $blue;
     }

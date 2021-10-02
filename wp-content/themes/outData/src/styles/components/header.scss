@@ -28,6 +28,44 @@
           letter-spacing: 0;
           @include bp(lg) {
             color: $dark-blue;
+
+            &:hover {
+              // color: $light-green;
+
+              &::after {
+                width: 100%;
+                margin-left: -50%;
+              }
+            }
+
+            &::after {
+              content: "";
+              bottom: -10%;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              width: 0;
+              background: $light-green;
+              transition: all .2s ease 0s;
+            }
+          }
+        }
+
+        &.current-menu-item {
+          a {
+            color: $dark-blue;
+            
+            &::after {
+              content: "";
+              bottom: -10%;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              width: 100%;
+              background: $light-green;
+              margin-left: -50%;
+              transition: all .2s ease 0s;
+            }
           }
         }
 
@@ -343,13 +381,30 @@
           text-transform: uppercase;
 
           @include bp(lg) {
-            padding: 15px 0;
+            // padding: 15px 0;
             transition-duration: 0.25s;
             transition-property: color, padding;
             transition-timing-function: ease-in-out;
+            position: relative;
 
             &:hover {
-              color: $blue-hover;
+              // color: $light-green;
+
+              &::after {
+                width: 100%;
+                margin-left: -50%;
+              }
+            }
+
+            &::after {
+              content: "";
+              bottom: -10%;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              width: 0;
+              background: $light-green;
+              transition: all .2s ease 0s;
             }
           }
         }
@@ -357,6 +412,18 @@
         &.current-menu-item {
           a {
             color: $white;
+            
+            &::after {
+              content: "";
+              bottom: -10%;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              width: 100%;
+              background: $light-green;
+              margin-left: -50%;
+              transition: all .2s ease 0s;
+            }
           }
         }
       }

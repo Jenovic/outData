@@ -11,8 +11,7 @@
 		<div class="cols">
 			<div class="col is-12">
 				<div class="latest-posts_title">
-					<h1>Read the latest posts</h1>
-					<a href="/article" class="view-more">View All <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
+					<h1>Featured articles</h1>
 				</div>
 			</div>
 			<?php $post_count = 1; if ( $q->have_posts() ) : while ( $q->have_posts() ) : $q->the_post(); ?>
@@ -32,6 +31,9 @@
 					<?php get_template_part('includes/shared/post-tile'); ?>
 				</div>
 			<?php $post_count++; endwhile; endif; wp_reset_postdata(); ?>
+			</div>
+			<div class="col is-12">
+				<a href="/article" class="view-more">View All <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
 			</div>
 		</div>
 	</div>

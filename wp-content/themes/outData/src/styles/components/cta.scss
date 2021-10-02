@@ -1,5 +1,6 @@
 .cta {
-  margin: 40px 0;
+  padding: 80px 0;
+  background-color: #f0f4f5;
 
   .cols {
     // padding: 0 20px;
@@ -9,6 +10,7 @@
   &-wrapper {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     // box-shadow: 0 2px 4px rgba($black-hex, 0.13);
+    background-color: $white;
     margin: 10px 0 25px;
     display: flex;
     flex-direction: column;
@@ -75,6 +77,8 @@
 
 .mode-dark {
   .cta {
+    background-color: $body-dark;
+
     &-wrapper {
       background-color: $header-black;
     }

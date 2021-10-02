@@ -1,4 +1,6 @@
 .latest-posts {
+  padding: 80px 0;
+  
   &_title {
     display: flex;
     align-items: center;
@@ -10,12 +12,44 @@
       color: $navy-blue;
     }
 
+    h1 {
+      font-size: 24px;
+      margin: 0;
+      text-transform: uppercase;
+
+      &::after {
+        background-color: $light-green;
+        content: '';
+        height: 5px;
+        width: 20px;
+        margin-top: 5px;
+        margin-bottom: 1rem;
+        display: block;
+        position: relative;
+      }
+    }
+
     a {
       z-index: 200;
       text-decoration: none;
+      position: relative;
 
       &:hover {
-        text-decoration: underline;
+        &::after {
+          width: 100%;
+          margin-left: -50%;
+        }
+      }
+
+      &::after {
+        content: "";
+        bottom: -10%;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        width: 0;
+        background: $light-green;
+        transition: all .2s ease 0s;
       }
     }
   }

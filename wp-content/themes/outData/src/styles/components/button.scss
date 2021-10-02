@@ -47,6 +47,14 @@
   }
 }
 
+%button-red {
+  background-color: $crimson;
+
+  &:hover {
+    background-color: $crimson-hover;
+  }
+}
+
 %button-white {
   background-color: $white;
   color: $dark;
@@ -82,6 +90,14 @@ input[type='button'] {
 
       &:hover {
         background-color: $blue-hover;
+      }
+    }
+
+    &.button--red {
+      background-color: $crimson;
+
+      &:hover {
+        background-color: $crimson-hover;
       }
     }
 
@@ -128,6 +144,11 @@ input[type='button'] {
     @extend %button-blue;
   }
 
+  &--red,
+  &.red {
+    @extend %button-red;
+  }
+
   &--white,
   &.white {
     @extend %button-white;
@@ -160,6 +181,12 @@ input[type='button'] {
   &.button--blue,
   &.blue {
     @extend %button-blue;
+  }
+
+  &[class*='--red'],
+  &.button--red,
+  &.red {
+    @extend %button-red;
   }
 
   &[class*='--white'],

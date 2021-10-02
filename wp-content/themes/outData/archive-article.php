@@ -34,10 +34,7 @@
 			<div class="col is-12 load-hidden">
 				<div class="cat-meta">
 					<h4><?php echo $term->name; ?></h4>
-					<div class="link">
-						<a href="<?php echo get_term_link($term); ?>">View more</a>
-						<span class="icon "><i class="fas fa-arrow-right"></i></span>
-					</div>
+					<a class="view-more" href="<?php echo get_term_link($term); ?>">View more <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
 				</div>
 			</div>
 			<?php	$articles = new WP_Query(array(
@@ -57,6 +54,9 @@
 					<?php get_template_part('includes/shared/post-tile'); ?>
 				</div>
 			<?php endwhile; endif; ?>
+			<!-- <div class="col is-12 load-hidden">
+				<a class="view-more" href="<?php echo get_term_link($term); ?>">View more <span class="icon "><i class="fas fa-arrow-right"></i></span></a>
+			</div> -->
 		</div>
 	<?php endforeach; ?>
 

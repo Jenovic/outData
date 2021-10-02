@@ -31,6 +31,7 @@
       justify-content: space-between;
 
       &_time {
+        // color: $crimson;
         span {
           margin-right: 5px;
         }
@@ -50,10 +51,6 @@
     background-size: cover !important;
     background-position: 50% !important;
     height: 165px;
-
-    // @include bp(lg) {
-    //   background-size: contain !important;
-    // }
   }
 
   &:hover {

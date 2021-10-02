@@ -22,15 +22,15 @@
 					}
 				?>
 			</div>
-			<div class="col is-12">
-				<h2>Category > <?php echo $term->name; ?></h2>
-			</div>
 		</div>
 	</div>
 </section>
 <section class="article-cat-content">
 	<div class="container">
 		<div class="cols has-padding-50">
+			<div class="col is-12">
+				<h2>Category > <?php echo $term->name; ?></h2>
+			</div>
 			<?php if ( $articles->have_posts() ) : while ( $articles->have_posts() ) : $articles->the_post(); ?>
 				<div class="col is-12 is-6-md is-3-lg load-hidden">
 					<?php get_template_part('includes/shared/post-tile'); ?>

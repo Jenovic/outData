@@ -62,20 +62,21 @@
         transition-timing-function: ease-in-out;
 
         &:hover {
-          text-decoration: underline;
+          &::after {
+            width: 100%;
+            margin-left: -50%;
+          }
         }
 
         &::after {
-          @include bp(lg) {
-            content: '';
-            bottom: 20.5%;
-            height: 1px;
-            left: 50%;
-            position: absolute;
-            width: 0;
-            background: #0e1516;
-            transition: all 0.2s ease 0s;
-          }
+          content: "";
+          bottom: -10%;
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          width: 0;
+          background: $light-green;
+          transition: all .2s ease 0s;
         }
       }
     }
