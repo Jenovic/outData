@@ -5,24 +5,17 @@
 		<div class="cols">
 			<div class="col is-12 is-8-md">
 				<div class="article-single-meta load-hidden">
-					<!-- <?php
-						if ( function_exists('yoast_breadcrumb') ) {
-							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-						}
-					?> -->
-					<!-- <h1 class="article-single-hero__title"><?php echo the_title(); ?></h1> -->
 					<div class="post_meta_wrapper">
 						<div class="article-single-meta__post_meta">
-							<?php 
+							<!-- <?php 
 								$get_author_id = get_the_author_meta('ID');
 								$get_author_gravatar = get_avatar_url($get_author_id, array('size' => 100));
 								echo '<img src="'.$get_author_gravatar.'" alt="'.get_the_title().'" />';
-							?>
+							?> -->
+							<span class="author-icon"></span>
 							<div class="article-single-meta__post_meta-content">
 								<div class="author">
-									<span class="name"><?php echo get_the_author_meta('first_name', $get_author_id); ?></span>
-									<span class="name"><?php echo ' '; ?></span>
-									<span class="name"><?php echo get_the_author_meta('last_name', $get_author_id); ?></span>
+									<span class="name"><?php echo get_field("author_name"); ?></span>
 								</div>
 								<span class="icon"><i class="fas fa-clock"></i></span>
 								<span class="time"><?php echo theme::meks_time_ago(); ?></span>
@@ -37,7 +30,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="article-single-hero__image" style="background: url(<?php the_post_thumbnail_url('archive-thumbnail'); ?>);"></div> -->
 				</div>
 				<div class="article-single-content load-hidden">
 					<?php the_content(); ?>
@@ -60,7 +52,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col is-12 is-12-md"></div> -->
 			<div class="col is-12 is-4-md">
 				<div class="article-single__related-posts load-hidden">
 						<h3 class="title">Related Articles</h3>

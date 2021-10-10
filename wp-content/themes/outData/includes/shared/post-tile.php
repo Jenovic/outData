@@ -12,9 +12,9 @@
 				<span class="icon"><i class="fas fa-clock"></i></span>
 				<?php echo theme::meks_time_ago(); ?>
 			</div>
-			<div class="meta_author">
-				<span><?php echo get_the_author(); ?></span>
-			</div>
+			<!-- <div class="meta_author">
+				<span><?php echo get_field("author_name"); ?></span>
+			</div> -->
 		</div>
 	</div>
 </a>
