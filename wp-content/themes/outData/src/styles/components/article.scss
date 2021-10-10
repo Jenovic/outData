@@ -14,14 +14,28 @@
     }
 
     h1 {
+      font-size: 35px;
       line-height: 45px;
-      margin: 30px 0 10px;
+      margin: 30px 0 20px;
+      text-transform: uppercase;
+
+      &::after {
+        background-color: $light-green;
+        content: '';
+        height: 5px;
+        width: 20px;
+        margin-top: 5px;
+        margin-bottom: 1rem;
+        display: block;
+        position: relative;
+      }
     }
 
     svg {
       display: none;
       height: 200px;
       width: 200px;
+      fill: white;
 
       @include bp(md) {
         display: block;
@@ -58,6 +72,13 @@
 
   .cols:nth-child(even) {
     background-color: #f0f4f5;
+    .tile-article__content {
+      background-color: $white;
+
+      &:hover {
+        background-color: #d2e0fd;
+      }
+    }
   }
 
   .cat-meta {
@@ -89,10 +110,10 @@
 }
 
 .article-single {
-  padding: 50px 0 20px;
+  padding: 0 0 20px;
 
   @include bp(md) {
-    padding: 50px 0;
+    padding:  0 0 100px;
   }
 
   .container {
@@ -100,10 +121,47 @@
   }
 
   &-hero {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    z-index: 1;
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      background-color: #0f1425;
+      content: "";
+      left: 0;
+      height: 100%;
+      opacity: .3;
+      top: 0;
+      width: 100%;
+    }
+
+    &--content {
+      padding: 80px 0;
+
+      @include bp(md) {
+        padding: 150px 0;
+      }
+
+      span {
+        color: $white;
+        display: inline-block;
+        max-width: 630px;
+      }
+    }
+
     &__title {
-      color: $navy-blue;
+      color: $white;
       font-size: 20px;
-      margin: 50px 0 30px;
+      text-transform: uppercase;
+      margin: 0 0 40px;
 
       @include bp(md) {
         font-size: 30px;
@@ -112,8 +170,36 @@
       @include bp(lg) {
         font-size: 40px;
       }
+
+      &::after {
+        background-color: $light-green;
+        content: '';
+        height: 5px;
+        width: 20px;
+        margin-top: 5px;
+        margin-bottom: 1rem;
+        display: block;
+        position: relative;
+      }
     }
 
+    .hero_image_creds {
+      color: $white;
+      font-style: italic;
+      font-size: 14px;
+      margin: 0 0 40px;
+
+      @include bp(md) {
+        margin: 0;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  &-meta {
     &__post_meta {
       align-items: center;
       display: flex;
@@ -159,17 +245,10 @@
     .post_meta_wrapper {
       display: flex;
       justify-content: space-between;
-      padding: 0 0 50px;
-    }
+      padding: 50px 0 30px;
 
-    .hero_image_creds {
-      color: $dark-grey;
-      font-style: italic;
-      font-size: 14px;
-      margin-top: -10px;
-
-      a {
-        color: $dark-grey;
+      @include bp(md) {
+        padding: 70px 0 30px;
       }
     }
   }
@@ -287,12 +366,26 @@
     }
 
     h3 {
-      color: $navy-blue;
-      font-size: 20px;
-      margin: 0 0 20px;
-
-      @include bp(md) {
-        font-size: 25px;
+      &.title {
+        color: $navy-blue;
+        font-size: 18px;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+  
+        @include bp(md) {
+          font-size: 22px;
+        }
+  
+        &::after {
+          background-color: $light-green;
+          content: '';
+          height: 5px;
+          width: 20px;
+          margin-top: 5px;
+          margin-bottom: 1rem;
+          display: block;
+          position: relative;
+        }
       }
     }
 
@@ -337,6 +430,14 @@
 
     .cols:nth-child(even) {
       background-color: $body-dark;
+
+      .tile-article__content {
+        background-color: $header-black;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
     }
 
     .cat-meta {
@@ -351,7 +452,7 @@
   .article-single {
     &-hero {
       &__title {
-        color: $blue;
+        color: $white;
       }
 
       &__post_meta {
@@ -406,6 +507,23 @@
         color: $blue;
       }
     }
+
+    &-meta {
+      &__post_meta {
+        &-content {
+          color: $white;
+        }
+      }
+      &__post_socials {
+        span {
+          color: $white;
+        }
+        .icon {
+          color: $light-green;
+        }
+      }
+    }
+
   }
 
   .article-cat-content {

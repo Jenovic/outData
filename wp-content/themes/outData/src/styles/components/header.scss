@@ -95,6 +95,21 @@
     [class*='__actions'] {
       padding: 0;
     }
+
+    [class*='__search__toggle'] {
+      background-image: url('../assets/icon-search-black.svg');
+    }
+
+    [class*='__search'] {
+      button {
+        background-image: url('../assets/icon-search-black.svg');
+      }
+    }
+
+    [class*='__mode_light'] {
+      background: url('../../src/assets/icon-light-black.svg');
+    }
+
   }
 
   .container {
@@ -715,7 +730,7 @@
 
     button,
     &__toggle {
-      background-image: url('../assets/icon-search.svg');
+      background-image: url('../assets/icon-search-white.svg');
       background-repeat: no-repeat;
       cursor: pointer;
       height: 20px;
@@ -778,6 +793,10 @@
       [class*='__toggle'] {
         opacity: 0;
         pointer-events: none;
+
+        @include bp(md) {
+          opacity: 1;
+        }
       }
 
       button {
@@ -823,13 +842,13 @@
     }
 
     &_dark {
-      background: url('../../src/assets/dark.webp');
+      background: url('../../src/assets/icon-dark-white.svg');
       background-size: 100%;
       background-repeat: no-repeat;
     }
 
     &_light {
-      background: url('../../src/assets/light.webp');
+      background: url('../../src/assets/icon-light-white.svg');
       background-size: 100%;
       background-repeat: no-repeat;
     }
@@ -1069,7 +1088,6 @@ $hamburger-hover-filter: opacity(50%) !default;
   }
 }
 
-.single-article,
 .tax-article_cat,
 .search-results,
 .search-no-results,
@@ -1090,6 +1108,21 @@ $hamburger-hover-filter: opacity(50%) !default;
         color: $dark-blue;
       }
     }
+
+    &__search {
+      &__toggle,
+      button {
+        background-image: url('../assets/icon-search-black.svg');
+      }
+    }
+
+    &__mode {
+      &_light {
+        background: url('../../src/assets/icon-light-black.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
   }
 }
 
@@ -1106,6 +1139,16 @@ $hamburger-hover-filter: opacity(50%) !default;
         background-position: center right;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+
+      [class*='__search__toggle'] {
+        background-image: url('../assets/icon-search-white.svg');
+      }
+  
+      [class*='__search'] {
+        button {
+          background-image: url('../assets/icon-search-white.svg');
+        }
       }
     }
 
@@ -1136,7 +1179,7 @@ $hamburger-hover-filter: opacity(50%) !default;
     &__search {
       button,
       &__toggle {
-        background-image: url('../assets/icon-search-black.svg');
+        background-image: url('../assets/icon-search-white.svg');
         background-repeat: no-repeat;
         cursor: pointer;
         height: 20px;

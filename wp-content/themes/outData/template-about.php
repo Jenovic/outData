@@ -23,7 +23,7 @@ $img = get_field('about_hero_image');
 	<div class="container">
 		<div class="cols align-center">
 			<div class="col is-12 is-10-md is-10-lg load-hidden">
-				<h1><?php the_field('about_hero_title'); ?></h1>
+				<div class="title"><h1><?php the_field('about_hero_title'); ?></h1></div>
 			</div>
 		</div>
 	</div>

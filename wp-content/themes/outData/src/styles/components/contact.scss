@@ -25,12 +25,22 @@
     color: $navy-blue;
     font-size: 30px;
     text-align: center;
-    text-decoration: underline;
     text-transform: uppercase;
 
     @include bp(md) {
       font-size: 40px;
       text-align: left;
+    }
+
+    &::after {
+      background-color: $light-green;
+      content: '';
+      height: 5px;
+      width: 30px;
+      margin-top: 5px;
+      margin-bottom: 1rem;
+      display: block;
+      position: relative;
     }
   }
 }

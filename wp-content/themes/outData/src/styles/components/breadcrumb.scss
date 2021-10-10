@@ -38,6 +38,20 @@
   }
 }
 
+.article-single-hero {
+  #breadcrumbs {
+    a {
+      color: $white;
+    }
+
+    span {
+      &.breadcrumb_last {
+        color: $white;
+      }
+    }
+  }
+}
+
 .article-single-hero,
 .article-cat-hero {
   #breadcrumbs {
@@ -57,7 +71,7 @@
 
       span {
         &.breadcrumb_last {
-          color: $grey;
+          color: $white;
         }
       }
     }
